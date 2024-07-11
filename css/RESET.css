@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* Documento CSS */
+
+/* CSS Reset retirado de https://www.super-simple.net/blog/un-css-reset-moderno/ */
+
+/* Regras do box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Removem o Padding padrão */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove a Margem padrão */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Define os elementos principais do corpo */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* Remove os estilos de listas ordenadas e não ordenadas */
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* Elementos de âncora sem classe não serão estilizados */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Fazer com que seja mais fácil trabalhar com imagens */
+img {
+	max-width: 100%;
+	display: block;
+	user-select: none;
+}
+
+/* Flow e ritmo em artigos naturalmente. */
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Naturalmente importar a fonte padrão do documento */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+/* Remove todas as animações para aqueles que preferem */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
