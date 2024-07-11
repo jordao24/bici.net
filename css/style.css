@@ -18,11 +18,11 @@
 		--BRANCO: #f4f4f5; /* 70% */
 
 		/* ===== Cores utiliárias ===== */
-
+		--AZUL-H: rgb(37, 40, 135);
 		/* ===== Tamanhos e configurações padrões ===== */
 
 		/* PADDING */
-		--PADDING-GG: 2.7em; /* 54px */
+		--PADDING-GG: 3.2em; /* 64px */
 		--PADDING-G: 2.2em; /* 44px */
 		--PADDING-M: 1.7em; /* 34px */
 		--PADDING-P: 1.2em; /* 24px */
@@ -57,22 +57,93 @@
 	}
 
 	/* ===== Elementos do Corpo ===== */
-	html {
-		scroll-behavior: smooth;
-	}
 	body {
 		font-family: var(--FF);
 		font-size: var(--FS);
-		min-height: 100vh;
 		hyphens: auto;
 		text-justify: distribute-all-lines;
 		background-color: var(--BRANCO);
 		position: relative;
+		margin: 0;
 	}
 	:is(h1, h2, h3, h4, h5, h6) {
 		letter-spacing: 2px;
 		font-weight: 200;
 		font-size: var(--FS-TITLE);
 		font-family: var(--FF-TITLE);
+	}
+	/* ===== Cabeçalho da página ===== */
+	.header {
+		display: flex;
+		max-height: 90px;
+		background-color: rgba(from var(--AZUL-H) r g b / 80%);
+		backdrop-filter: blur(1rem);
+		-webkit-backdrop-filter: blur(1rem);
+		padding: var(--PADDING-M) calc(var(--PADDING-GG) + 5rem);
+		align-items: center;
+		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		.logo img {
+			height: 80px;
+			width: auto;
+		}
+		.nav-ul {
+			display: flex;
+			gap: 6rem;
+		}
+		.nav-a:any-link {
+			text-decoration: none;
+			color: var(--BRANCO);
+			font-family: var(--FF-HEADER);
+			font-size: var(--FS-HEADER);
+			transition: color 350ms;
+		}
+		.nav-a:hover {
+			color: var(--LARANJA);
+		}
+		.he-buttons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.he-button {
+			border: 2px solid var(--LARANJA);
+			background-color: transparent;
+			width: auto;
+			height: 48px;
+			border-radius: 10px;
+			margin: var(--MARGIN-P);
+			transition: box-shadow 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+		.he-button:hover {
+			box-shadow: inset 100px 0 0 0 var(--LARANJA);
+			cursor: pointer;
+		}
+		.carrinho {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 0 var(--PADDING-PP);
+			text-decoration: none;
+			color: var(--BRANCO);
+			font-size: var(--FS-HEADER);
+			font-weight: bold;
+		}
+		.carrinho svg {
+			width: 24px;
+			height: 24px;
+		}
+		.he-login {
+			height: 48px;
+			width: 48px;
+			border-radius: 50%;
+			border: none;
+			background-color: var(--AZUL);
+		}
+		.he-login a {
+			display: grid;
+			place-content: center;
+		}
 	}
 }
