@@ -1,6 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Tamanho de tela acima dos 1692px */
 @media only screen and (min-width: 1692px) {
-	/* Variaveis */
+	/* ===== Variaveis ===== */
+	:root {
+		/* ===== Fonte ===== */
+		--FF: "Montserrat", sans-serif;
+		--FF-TITLE: "Anton SC", sans-serif;
+		--FF-HEADER: "Lexend", sans-serif;
+		--FS-HEADER: clamp(1.2rem, 1.2em, 28px); /* 19px, 24px */
+		--FS: clamp(1rem, 1em, 24px); /* 16px, 20px */
+		--FS-TITLE: clamp(2rem, 2em, 48px); /* 32px 40px */
+
+		/* ===== Esquema de cores ===== */
+		--LARANJA: #ff4e06; /* 10% */
+		--AZUL: #363dc5; /* 20% */
+		--BRANCO: #f4f4f5; /* 70% */
+
+		/* ===== Cores utiliárias ===== */
+
+		/* ===== Tamanhos e configurações padrões ===== */
+
+		/* PADDING */
+		--PADDING-GG: 2.7em; /* 54px */
+		--PADDING-G: 2.2em; /* 44px */
+		--PADDING-M: 1.7em; /* 34px */
+		--PADDING-P: 1.2em; /* 24px */
+		--PADDING-PP: 0.7em; /* 14px */
+
+		/* MARGIN */
+		--MARGIN-GG: 8rem; /* 128px */
+		--MARGIN-G: 6rem; /* 96px */
+		--MARGIN-M: 4rem; /* 64px */
+		--MARGIN-P: 2rem; /* 32px */
+		--MARGIN-PP: 1rem; /* 16px */
+
+		/* SOMBRAS */
+
+		/* Direção */
+		--SHADOW-X-G: 0.75rem; /* 12px */
+		--SHADOW-X: 0.5rem; /* 8px */
+		--SHADOW-X-P: 0.25rem; /* 4px */
+
+		--SHADOW-Y-G: 0.75rem; /* 12px */
+		--SHADOW-Y: 0.5rem; /* 8px */
+		--SHADOW-Y-P: 0.25rem; /* 4px */
+
+		/* Blur e Offset */
+		--SHADOW-BLUR-G: 0.5rem; /* 8px */
+		--SHADOW-BLUR: 0.25rem; /* 4px */
+		--SHADOW-BLUR-P: 0.125rem; /* 2px */
+
+		--SHADOW-OFFSET-G: 0.7em; /* 14px */
+		--SHADOW-OFFSET: 0.5em; /* 10px */
+		--SHADOW-OFFSET-P: 0.2em; /* 4px */
+	}
+
+	/* ===== Elementos do Corpo ===== */
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		font-family: var(--FF);
+		font-size: var(--FS);
+		min-height: 100vh;
+		hyphens: auto;
+		text-justify: distribute-all-lines;
+		background-color: var(--BODY-COLOR);
+		color: var(--FONT-COLOR);
+		position: relative;
+	}
+	:is(h1, h2, h3, h4, h5, h6) {
+		font-family: var(--FF-TITLE);
+	}
 }
