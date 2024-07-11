@@ -66,11 +66,13 @@
 		min-height: 100vh;
 		hyphens: auto;
 		text-justify: distribute-all-lines;
-		background-color: var(--BODY-COLOR);
-		color: var(--FONT-COLOR);
+		background-color: var(--BRANCO);
 		position: relative;
 	}
 	:is(h1, h2, h3, h4, h5, h6) {
+		letter-spacing: 2px;
+		font-weight: 200;
+		font-size: var(--FS-TITLE);
 		font-family: var(--FF-TITLE);
 	}
 }
