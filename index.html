@@ -11,8 +11,8 @@
 
 		<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
 
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/RESET.css" />
+		<link rel="stylesheet" type="text/css" href="css/RESET.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script defer src="js/script.js"></script>
 	</head>
 	<body>
@@ -85,6 +85,19 @@
 				</button>
 			</div>
 		</header>
+		<script>
+			const header = document.querySelector(".header");
+
+			window.onscroll = function revealHeader() {
+				if (window.scrollY >= 250) {
+					header.style.cssText =
+						"background-color: rgb(from var(--AZUL-H) r g b / 40%); backdrop-filter: blur(10px); transition: background-color 200ms, backdrop-filter 200ms";
+				} else {
+					header.style.cssText =
+						"background-color: transparent; backdrop-filter: none;transition: background-color 200ms, backdrop-filter 200ms;";
+				}
+			};
+		</script>
 		<main class="main">
 			<section class="hero">
 				<div class="bicycle-svg">
@@ -94,11 +107,14 @@
 						/>
 					</svg>
 				</div>
-				<p class="hero-title">
-					Sua casa para encontrar a
-					<span class="underline">melhor bicicleta</span> para os
-					<span class="underline">melhores ciclistas!</span>
-				</p>
+				<div class="he-content">
+					<p class="hero-title">
+						Sua casa para encontrar a
+						<span class="underline">melhor bicicleta</span> para os
+						<span class="underline">melhores ciclistas!</span>
+					</p>
+					<button><a href="bicicletas.html">Conheça nossas bikes!</a></button>
+				</div>
 				<div class="custom-shape-divider-bottom-1720743575">
 					<svg
 						data-name="Layer 1"
