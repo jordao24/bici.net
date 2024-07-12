@@ -314,4 +314,45 @@
 			}
 		}
 	}
+	/* ===== Parte do Rodapé da página ===== */
+	.footer {
+		background-color: var(--AZUL-H);
+		color: var(--BRANCO);
+		display: flex;
+		justify-content: space-evenly;
+		height: 96px;
+	}
+	.fo-left {
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		gap: 48px;
+		align-items: center;
+		justify-content: center;
+	}
+	.ft-a {
+		width: 72px;
+		height: 72px;
+		background-color: var(--AZUL);
+		display: grid;
+		place-content: center;
+		border-radius: 16px;
+		box-shadow: 0 var(--SHADOW-Y-P) 0 0 rgb(from var(--BRANCO) 30 130 210 / 20%);
+		transition: filter 200ms;
+	}
+	.ft-a svg {
+		width: 48px;
+		height: 48px;
+	}
+	.whatsapp svg {
+		filter: invert(100%);
+	}
+	.ft-a:hover {
+		filter: brightness(120%);
+	}
+	.fo-right {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
 }
