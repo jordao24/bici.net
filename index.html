@@ -42,7 +42,13 @@
 				</ul>
 			</nav>
 			<div class="he-buttons">
-				<button draggable="false" id="carrinho" type="button" class="he-button">
+				<button
+					onclick="callContainer()"
+					draggable="false"
+					id="carrinho"
+					type="button"
+					class="he-button"
+				>
 					<div class="carrinho">
 						<svg
 							draggable="false"
@@ -60,6 +66,7 @@
 					</div>
 				</button>
 				<div class="carrinho-container">
+					<div class="top-part"><span onclick="closeContainer()">&times;</span></div>
 					<div class="carrinho-content"></div>
 					<hr />
 					<div class="carrinho-final">
@@ -68,6 +75,18 @@
 						<button class="ca-button confirmar">Finalizar compra!</button>
 					</div>
 				</div>
+				<script>
+					const carButton = document.getElementById("carrinho");
+					const carContainer = document.querySelector(".carrinho-container");
+
+					function callContainer() {
+						carContainer.classList.add("show-up");
+					}
+
+					function closeContainer() {
+						carContainer.classList.remove("show-up");
+					}
+				</script>
 				<button draggable="false" type="button" class="he-login" id="usuario">
 					<a
 						draggable="false"
