@@ -43,13 +43,8 @@
 			</nav>
 			<div class="he-buttons">
 				<button draggable="false" id="carrinho" type="button" class="he-button">
-					<a
-						draggable="false"
-						href="carrinho.html"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="carrinho"
-						><svg
+					<div class="carrinho">
+						<svg
 							draggable="false"
 							xmlns="http://www.w3.org/2000/svg"
 							height="24px"
@@ -62,8 +57,17 @@
 							/>
 						</svg>
 						<div class="contador">0</div>
-					</a>
+					</div>
 				</button>
+				<div class="carrinho-container">
+					<div class="carrinho-content"></div>
+					<hr />
+					<div class="carrinho-final">
+						<p>Valor total: <span class="valor-total">0,00</span></p>
+						<button class="ca-button cancelar">Esvaziar carrinho</button>
+						<button class="ca-button confirmar">Finalizar compra!</button>
+					</div>
+				</div>
 				<button draggable="false" type="button" class="he-login" id="usuario">
 					<a
 						draggable="false"

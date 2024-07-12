@@ -141,6 +141,57 @@
 			width: 24px;
 			height: 24px;
 		}
+		.carrinho-container {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: -25%;
+			background-color: var(--BRANCO);
+			height: 100vh;
+			width: 45vh;
+		}
+		.carrinho-content {
+			overflow-y: auto;
+			height: 75%;
+		}
+		.carrinho-final {
+			padding: var(--PADDING-P) var(--PADDING-G);
+			display: grid;
+			grid-template-areas:
+				"a a a"
+				"b . c";
+			row-gap: 20px;
+		}
+		.carrinho-final p {
+			grid-area: a;
+			text-align: center;
+			color: var(--LARANJA);
+			font-weight: 800;
+		}
+		.valor-total:before {
+			content: "R$";
+		}
+		.ca-button {
+			border: none;
+			padding: 8px;
+			background-color: lightgray;
+			cursor: pointer;
+			transition: box-shadow 350ms, color 200ms;
+		}
+		.cancelar {
+			grid-area: b;
+		}
+		.cancelar:hover {
+			box-shadow: inset 0 40px 0 0 firebrick;
+			color: var(--BRANCO);
+		}
+		.confirmar {
+			grid-area: c;
+		}
+		.confirmar:hover {
+			box-shadow: inset 0 -40px 0 0 var(--AZUL);
+			color: var(--BRANCO);
+		}
 		.he-login {
 			height: 48px;
 			width: 48px;
@@ -321,38 +372,38 @@
 		display: flex;
 		justify-content: space-evenly;
 		height: 96px;
-	}
-	.fo-left {
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-		gap: 48px;
-		align-items: center;
-		justify-content: center;
-	}
-	.ft-a {
-		width: 72px;
-		height: 72px;
-		background-color: var(--AZUL);
-		display: grid;
-		place-content: center;
-		border-radius: 16px;
-		box-shadow: 0 var(--SHADOW-Y-P) 0 0 rgb(from var(--BRANCO) 30 130 210 / 20%);
-		transition: filter 200ms;
-	}
-	.ft-a svg {
-		width: 48px;
-		height: 48px;
-	}
-	.whatsapp svg {
-		filter: invert(100%);
-	}
-	.ft-a:hover {
-		filter: brightness(120%);
-	}
-	.fo-right {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
+		.fo-left {
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+			align-items: center;
+			justify-content: center;
+		}
+		.ft-a {
+			width: 72px;
+			height: 72px;
+			background-color: var(--AZUL);
+			display: grid;
+			place-content: center;
+			border-radius: 16px;
+			box-shadow: 0 var(--SHADOW-Y-P) 0 0 rgb(from var(--BRANCO) 30 130 210 / 20%);
+			transition: filter 200ms;
+		}
+		.ft-a svg {
+			width: 48px;
+			height: 48px;
+		}
+		.whatsapp svg {
+			filter: invert(100%);
+		}
+		.ft-a:hover {
+			filter: brightness(120%);
+		}
+		.fo-right {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
 	}
 }
