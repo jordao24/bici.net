@@ -119,10 +119,10 @@ body {
 		height: 48px;
 		border-radius: 10px;
 		margin: var(--MARGIN-P);
-		transition: box-shadow 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+		transition: box-shadow 250ms linear;
 	}
 	.he-button:hover {
-		box-shadow: inset 100px 0 0 0 var(--LARANJA);
+		box-shadow: inset 85px 0 0 0 var(--LARANJA);
 		cursor: pointer;
 	}
 	.carrinho {
