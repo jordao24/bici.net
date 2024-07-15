@@ -581,7 +581,7 @@ body {
 	}
 	.main {
 		.hero {
-			height: 50svh;
+			height: 55svh;
 			padding: 1rem;
 			.bicycle-svg {
 				display: none;
