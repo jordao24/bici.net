@@ -78,6 +78,9 @@ body {
 	font-family: var(--FF-TITLE);
 }
 /* ===== Cabeçalho da página ===== */
+.header-mobile {
+	display: none;
+}
 .header {
 	display: flex;
 	max-height: 90px;
@@ -204,17 +207,6 @@ body {
 	.confirmar:hover {
 		box-shadow: inset 0 -40px 0 0 var(--AZUL);
 		color: var(--BRANCO);
-	}
-	.he-login {
-		height: 48px;
-		width: 48px;
-		border-radius: 50%;
-		border: none;
-		background-color: var(--AZUL);
-	}
-	.he-login a {
-		display: grid;
-		place-content: center;
 	}
 }
 /* ===== Parte central da página ===== */
@@ -418,5 +410,175 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+	}
+}
+
+@media only screen and (orientation: portrait) and (max-width: 600px) {
+	.header {
+		display: none;
+	}
+	.header-mobile {
+		position: relative;
+		padding: var(--PADDING-P);
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: rgb(from var(--AZUL-H) r g b / 40%);
+		.hm-logo img {
+			height: auto;
+			width: 196px;
+		}
+		.hm-shownav {
+			cursor: pointer;
+			background-color: transparent;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			padding: var(--PADDING-P);
+		}
+		:is(.bar1, .bar2, .bar3) {
+			width: 30px;
+			height: 4px;
+			background-color: var(--LARANJA);
+			border-radius: 6px;
+		}
+		.hm-nav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgb(from var(--BRANCO) r g b / 70%);
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			.hm-hidenav {
+				cursor: pointer;
+				border: none;
+				background-color: transparent;
+				font-size: 3rem;
+				color: var(--LARANJA);
+				position: fixed;
+				top: 2%;
+				right: 5%;
+			}
+			.nav-ul {
+				align-self: center;
+				text-align: center;
+			}
+			.nav-li {
+				border-bottom: 1px solid var(--LARANJA);
+				padding: var(--PADDING-PP) var(--PADDING-GG);
+			}
+			.nav-a {
+				color: var(--LARANJA);
+				text-decoration: none;
+			}
+			.he-button {
+				cursor: pointer;
+				border: 2px solid var(--LARANJA);
+				background-color: transparent;
+				width: auto;
+				height: 48px;
+				border-radius: 10px;
+				margin: var(--MARGIN-PP);
+				transition: box-shadow 250ms linear;
+			}
+			.he-button:focus-within {
+				box-shadow: inset 85px 0 0 0 var(--LARANJA);
+				cursor: pointer;
+			}
+			.carrinho {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 0 var(--PADDING-PP);
+				text-decoration: none;
+				color: var(--LARANJA);
+				font-size: var(--FS-HEADER);
+				font-weight: bold;
+			}
+			.carrinho svg {
+				width: 24px;
+				height: 24px;
+				fill: var(--LARANJA);
+			}
+		}
+		.mobile-carrinho-container {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: var(--BRANCO);
+			height: 100vh;
+			width: 100vw;
+			transform: translateX(-200%);
+			.top-part {
+				font-size: 3rem;
+				color: var(--LARANJA);
+				padding-left: 88%;
+			}
+			.top-part span {
+				user-select: none;
+				-webkit-user-select: none;
+				cursor: pointer;
+			}
+			.carrinho-content {
+				overflow-y: auto;
+				flex-grow: 1;
+			}
+			.carrinho-final {
+				border-top: 1px solid var(--LARANJA);
+				padding: var(--PADDING-P) var(--PADDING-M);
+				display: grid;
+				grid-template-areas:
+					"a a a"
+					"b . c";
+				row-gap: 20px;
+			}
+			.carrinho-final p {
+				grid-area: a;
+				font-weight: 800;
+				font-size: 1.4rem;
+			}
+			.valor-total:before {
+				content: "R$";
+			}
+			.ca-button {
+				border: none;
+				padding: 8px;
+				background-color: lightgray;
+				cursor: pointer;
+				transition: box-shadow 350ms, color 200ms;
+			}
+			.cancelar {
+				grid-area: b;
+			}
+			.cancelar:focus-within {
+				box-shadow: inset 0 40px 0 0 firebrick;
+				color: var(--BRANCO);
+			}
+			.confirmar {
+				grid-area: c;
+			}
+			.confirmar:focus-within {
+				box-shadow: inset 0 -40px 0 0 var(--AZUL);
+				color: var(--BRANCO);
+			}
+		}
+		.show-up {
+			display: flex;
+			transform: translateX(0);
+			transition: transform 300ms;
+		}
+	}
+	.main {
+		display: none;
+	}
+	.footer {
+		display: none;
 	}
 }
