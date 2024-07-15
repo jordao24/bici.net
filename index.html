@@ -170,13 +170,18 @@
 		</header>
 		<script>
 			const header = document.querySelector(".header");
+			const mobileHeader = document.querySelector(".header-mobile");
 
 			window.onscroll = function revealHeader() {
 				if (window.scrollY >= 100) {
 					header.style.cssText =
 						"background-color: rgb(from var(--AZUL-H) r g b / 40%); backdrop-filter: blur(10px); transition: background-color 200ms, backdrop-filter 200ms";
+					mobileHeader.style.cssText =
+						"background-color: rgb(from var(--AZUL-H) r g b / 40%); backdrop-filter: blur(10px); transition: background-color 200ms, backdrop-filter 200ms";
 				} else {
 					header.style.cssText =
+						"background-color: transparent; backdrop-filter: none;transition: background-color 200ms, backdrop-filter 200ms;";
+					mobileHeader.style.cssText =
 						"background-color: transparent; backdrop-filter: none;transition: background-color 200ms, backdrop-filter 200ms;";
 				}
 			};
@@ -249,7 +254,9 @@
 			</section>
 			<section class="sobrenos">
 				<div class="sbrn-container">
-					<h2 class="container-title">Como surgiu a Bici.Net?</h2>
+					<h2 class="container-title">
+						Como surgiu <span class="nowrap">a Bici.Net?</span>
+					</h2>
 					<p class="container-p">
 						A Bici.net nasceu da ideia de criar um espaço onde amantes das bicicletas
 						pudessem encontrar tudo o que precisam em um só lugar. Percebemos que,
@@ -258,7 +265,9 @@
 						combinamos nossa paixão e conhecimento para criar um portal completo, que
 						atende às diversas necessidades dos ciclistas.
 					</p>
-					<h2 class="container-title">Nosso objetivo!</h2>
+					<h2 class="container-title">
+						Nosso <span class="nowrap">objetivo!</span>
+					</h2>
 					<p class="container-p">
 						Queremos inspirar mais pessoas a adotarem o ciclismo como parte de seu
 						estilo de vida. Acreditamos que pedalar não é apenas um meio de
