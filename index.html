@@ -19,10 +19,10 @@
 		<!-- ============= HEADER ============== -->
 		<header class="header-mobile">
 			<a draggable="false" href="index.html" class="home">
-			<figure class="hm-logo">
-				<img draggable="false" src="imgs/logo.png" alt="Logo" />
-			</figure>
-		</a>
+				<figure class="hm-logo">
+					<img draggable="false" src="imgs/logo.png" alt="Logo" />
+				</figure>
+			</a>
 			<button class="hm-shownav" onclick="callNav()">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
@@ -47,9 +47,7 @@
 						>
 					</li>
 					<li class="nav-li">
-						<a draggable="false" href="index.html#faq" class="nav-a faq"
-							>FAQ</a
-						>
+						<a draggable="false" href="index.html#faq" class="nav-a faq">FAQ</a>
 					</li>
 					<button
 						onclick="callContainer()"
@@ -87,34 +85,36 @@
 					mobileNav.style.display = "none";
 				}
 			</script>
-							<aside class="mobile-carrinho-aside">
-								<div class="top-part">
-									<span class="ignore">
-									<p>Carrinho<div class="car-count">0</div></p></span>
-									<span onclick="closeContainer()">&times;</span>
-								</div>
-								<ul class="carrinho-content">
-									<!-- <li class="car-produto">
+			<aside class="mobile-carrinho-aside">
+				<div class="top-part">
+					<span class="ignore">
+						<p>Carrinho</p>
+						<div class="car-count">0</div></span
+					>
+					<span onclick="closeContainer()">&times;</span>
+				</div>
+				<ul class="carrinho-content">
+					<!-- <li class="car-produto">
 										<img src="imgs/old_logo.png" alt="TESTE" class="prod-img">
 										<p class="prod-nome">TESTE</p>
 										<p class="prod-valor">100,00</p>
 										<input type="number" name="quantidade" id="quantidade" value="1">
 										<button type="button" id="remove"><svg class="remove" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M267.33-120q-27.5 0-47.08-19.58-19.58-19.59-19.58-47.09V-740H160v-66.67h192V-840h256v33.33h192V-740h-40.67v553.33q0 27-19.83 46.84Q719.67-120 692.67-120H267.33Zm425.34-620H267.33v553.33h425.34V-740Zm-328 469.33h66.66v-386h-66.66v386Zm164 0h66.66v-386h-66.66v386ZM267.33-740v553.33V-740Z"/></svg></button>
 									</li> -->
-								</ul>
-								<div class="carrinho-final">
-									<p>Valor total: <span class="valor-total">0,00</span></p>
-									<button class="ca-button cancelar">Esvaziar carrinho</button>
-									<button class="ca-button confirmar">Finalizar compra!</button>
-								</div>
-							</aside>
+				</ul>
+				<div class="carrinho-final">
+					<p>Valor total: <span class="valor-total">0,00</span></p>
+					<button class="ca-button cancelar">Esvaziar carrinho</button>
+					<button class="ca-button confirmar">Finalizar compra!</button>
+				</div>
+			</aside>
 		</header>
 		<header class="header">
 			<a draggable="false" href="index.html" class="home">
-			<figure class="logo">
-				<img draggable="false" src="imgs/logo.png" alt="Logo" />
-			</figure>
-		</a>
+				<figure class="logo">
+					<img draggable="false" src="imgs/logo.png" alt="Logo" />
+				</figure>
+			</a>
 			<nav class="he-nav">
 				<ul class="nav-ul">
 					<li class="nav-li">
@@ -133,9 +133,7 @@
 						>
 					</li>
 					<li class="nav-li">
-						<a draggable="false" href="index.html#faq" class="nav-a faq"
-							>FAQ</a
-						>
+						<a draggable="false" href="index.html#faq" class="nav-a faq">FAQ</a>
 					</li>
 				</ul>
 			</nav>
@@ -166,7 +164,9 @@
 				<aside class="carrinho-aside">
 					<div class="top-part">
 						<span class="ignore">
-						<p>Carrinho<div class="car-count">0</div></p></span>
+							<p>Carrinho</p>
+							<div class="car-count">0</div></span
+						>
 						<span onclick="closeContainer()">&times;</span>
 					</div>
 					<ul class="carrinho-content">
@@ -186,9 +186,7 @@
 				</aside>
 				<script>
 					const carContainer = document.querySelector(".carrinho-aside");
-					const mobileContainer = document.querySelector(
-						".mobile-carrinho-aside"
-					);
+					const mobileContainer = document.querySelector(".mobile-carrinho-aside");
 
 					function callContainer() {
 						carContainer.classList.add("show-up");
@@ -289,7 +287,8 @@
 			<section id="sbrn" class="sobrenos">
 				<div class="sbrn-container">
 					<h2 class="container-title">
-						Como surgiu <span class="nowrap">a Bici.Net?</span>
+						<span class="nowrap">Como surgiu</span>
+						<span class="nowrap">a Bici.Net?</span>
 					</h2>
 					<p class="container-p">
 						A Bici.net nasceu da ideia de criar um espaço onde amantes das bicicletas
@@ -319,6 +318,62 @@
 					 	Fotos de Konstantin Remy adquiridas na Unsplash -->
 				</figure>
 			</section>
+			<section class="faq" id="faq">
+				<div class="faq-buttons">
+					<button class="faq-btn">
+						Como escolher a bicicleta que quero comprar?
+					</button>
+					<button class="faq-btn">
+						Qual a diferença entre tamanho do aro e quadro?
+					</button>
+					<button class="faq-btn">Quais são as formas de pagamento aceito?</button>
+					<button class="faq-btn">Meus dados são respeitados?</button>
+				</div>
+				<div class="faq-container">
+					<p class="faq-answer">
+						Para escolher sua bicicleta, você deve ter em mente três fatores:
+						primeiro, para que a bike que você busca será usada. Se mira em algo mais
+						urbano, uma speed ou uma elétrica urbana podem quebrar o galho, agora se
+						busca uma bike para trilhas, uma MTB pode cair bem. Segundo o tamanho do
+						aro, quer uma bike com um pneuzão, uma bike de pneu menor. E por fim, o
+						tamanho do quadro.
+					</p>
+					<p class="faq-answer">
+						O tamanho do aro é o tamanho da roda, enquanto o tamanho do quadro varia
+						de acordo com a altura do ciclista junto com outros fatores, como extensão
+						do braço, das pernas, etc.
+					</p>
+					<p class="faq-answer">
+						Aceitamos cartão de crédito e débito, além de pagamentos via PIX.
+					</p>
+					<p class="faq-answer">
+						Nosso site não guarda nenhum dado ou informação pessoal de nossos
+						clientes, nossos pagamentos são feitos pela plataforma Stripe, além de
+						segura, é uma plataforma efetiva e com mais de 5 anos de presença no
+						mercado.
+					</p>
+				</div>
+			</section>
+			<script>
+				const buttons = document.querySelectorAll(".faq-btn");
+				const answers = document.querySelectorAll(".faq-answer");
+
+				const activateQuestion = (index) => {
+					buttons.forEach((btn) => btn.classList.remove("active"));
+					answers.forEach((answer) => (answer.style.display = "none"));
+
+					buttons[index].classList.add("active");
+					answers[index].style.display = "block";
+				};
+
+				activateQuestion(0);
+
+				buttons.forEach((button, index) => {
+					button.addEventListener("click", () => {
+						activateQuestion(index);
+					});
+				});
+			</script>
 		</main>
 		<footer class="footer">
 			<section class="fo-left">
