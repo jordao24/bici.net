@@ -7,7 +7,7 @@
 			name="description"
 			content="Bici.net: A casa das bicicletas e do ciclista."
 		/>
-		<title>Bici.net: bicicletas</title>
+		<title>Bici.net: Bicicletas</title>
 
 		<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
 
@@ -18,9 +18,11 @@
 	</head>
 	<body>
 		<header class="header-mobile">
-			<figure class="hm-logo">
-				<img draggable="false" src="imgs/logo.png" alt="Logo" />
-			</figure>
+			<a draggable="false" href="index.html" class="home">
+				<figure class="hm-logo">
+					<img draggable="false" src="imgs/logo.png" alt="Logo" />
+				</figure>
+			</a>
 			<button class="hm-shownav" onclick="callNav()">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
@@ -39,8 +41,16 @@
 					</li>
 					<li class="nav-li">
 						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios</a
+							>Acessórios e peças</a
 						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#sbrn" class="nav-a sbrn"
+							>Sobre nós</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#faq" class="nav-a faq">FAQ</a>
 					</li>
 					<button
 						onclick="callContainer()"
@@ -103,14 +113,13 @@
 			</aside>
 		</header>
 		<header class="header">
-			<figure class="logo">
-				<img draggable="false" src="imgs/logo.png" alt="Logo" />
-			</figure>
+			<a draggable="false" href="index.html" class="nav-a home">
+				<figure class="logo">
+					<img draggable="false" src="imgs/logo.png" alt="Logo" />
+				</figure>
+			</a>
 			<nav class="he-nav">
 				<ul class="nav-ul">
-					<li class="nav-li">
-						<a draggable="false" href="index.html" class="nav-a home"> Início</a>
-					</li>
 					<li class="nav-li">
 						<a draggable="false" href="bikeshop.html" class="nav-a bikes"
 							>Bicicletas</a
@@ -118,8 +127,16 @@
 					</li>
 					<li class="nav-li">
 						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios</a
+							>Acessórios e peças</a
 						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#sbrn" class="nav-a sbrn"
+							>Sobre nós</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#faq" class="nav-a faq">FAQ</a>
 					</li>
 				</ul>
 			</nav>
@@ -186,22 +203,27 @@
 				</script>
 			</div>
 		</header>
+		<script>
+			const header = document.querySelector(".header");
+			const mobileHeader = document.querySelector(".header-mobile");
+
+			window.onscroll = function revealHeader() {
+				if (window.scrollY >= 340) {
+					header.style.cssText =
+						"background-color: rgb(from var(--AZUL-H) r g b / 40%); backdrop-filter: blur(10px); transition: background-color 200ms, backdrop-filter 200ms";
+					mobileHeader.style.cssText =
+						"background-color: rgb(from var(--AZUL-H) r g b / 40%); backdrop-filter: blur(10px); transition: background-color 200ms, backdrop-filter 200ms";
+				} else {
+					header.style.cssText =
+						"background-color: transparent; backdrop-filter: none;transition: background-color 200ms, backdrop-filter 200ms;";
+					mobileHeader.style.cssText =
+						"background-color: transparent; backdrop-filter: none;transition: background-color 200ms, backdrop-filter 200ms;";
+				}
+			};
+		</script>
 		<main class="main">
-			<section class="categorias">
-				<button class="cat-button" id="mtb">
-					<p>Mountain bike</p>
-				</button>
-				<button class="cat-button" id="speed">
-					<p>Bicicleta de estrada</p>
-				</button>
-				<button class="cat-button" id="gravel">
-					<p>Gravel Bike</p>
-				</button>
-				<button class="cat-button" id="parts">
-					<p>Peças para bicicleta</p>
-				</button>
-			</section>
 			<section class="slide-container">
+				<h2 class="page-title">BICICLETAS</h2>
 				<div class="slide show-up">
 					<img src="imgs/slides/slide (1).jpg" alt="Slide 1" />
 				</div>
@@ -231,61 +253,127 @@
 				}
 			</script>
 			<section class="bike-produtos">
-				<h1 class="produtos-title">TESTE</h1>
 				<section class="produtos">
 					<aside class="produtos-categoria">
 						<ul class="prod-categorias">
-							<li class="prod-cat-box">
-								TESTE
-								<p class="sub-box">TESTE</p>
-							</li>
+							<ul class="prod-cat-title">
+								<p>CATEGORIA</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="mtbhard" id="hardtail" />MTB Hardtail
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="mtbfs" id="fs" />MTB Full Suspension
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="speed" id="speed" />Speed
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="gravel" id="gravel" />Gravel
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletrica" id="eletrica" />Elétrica
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletricamtb" id="eletricamtb" />MTB
+									Elétrica
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletricaurb" id="eletricaurb" />Elétrica
+									Urbana
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="infantil" id="infantil" />Infantil
+								</li>
+							</ul>
 						</ul>
+						<ul class="prod-categorias">
+							<ul class="prod-cat-title">
+								<p>TAMANHO</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="peq" id="peq" />15-16" (P)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="med" id="med" />17-18" (M)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="lar" id="lar" />19" (G)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="xl" id="xl" />21"+ (GG)
+								</li>
+							</ul>
+						</ul>
+						<ul class="prod-categorias">
+							<ul class="prod-cat-title">
+								<p>ARO</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro24" id="aro24" />Aro 24
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro26" id="aro26" />Aro 26
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro275" id="aro275" />Aro 27.5
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro29" id="aro29" />Aro 29
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro700" id="aro700" />Aro 700
+								</li>
+							</ul>
+						</ul>
+						<ul class="prod-categorias">
+							<ul class="prod-cat-title">
+								<p>VELOCIDADES</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="20v" id="20v" />20 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="21v" id="21v" />21 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="22v" id="22v" />22 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="24v" id="24v" />24 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="9v" id="9v" />9 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="10v" id="10v" />10 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="11v" id="11v" />11 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="12v" id="12v" />12 velocidades
+								</li>
+							</ul>
+						</ul>
+						<ul class="prod-categorias">
+							<ul class="prod-cat-title">
+								<p>MATERIAL</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="carbono" id="carbono" />Carbono
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aluminio" id="aluminio" />Alumínio
+								</li>
+							</ul>
+						</ul>
+						<a href="#">LIMPAR FILTROS</a>
 					</aside>
 					<div class="produtos-container">
 						<div class="prod-card">
-							<a href="/">
+							<a href="example-page.html" class="prod-card-container">
 								<img src="imgs/old_logo.png" alt="TESTE" class="produto" />
 								<p class="produto-nome">TESTE</p>
 								<p class="produto-valor">100,00</p>
 								<p class="produto-desc">Mountain-bike 24v</p>
 							</a>
-							<button class="adicionar">Comprar</button>
-						</div>
-						<div class="prod-card">
-							<a href="/">
-								<img src="imgs/old_logo.png" alt="TESTE" class="produto" />
-								<p class="produto-nome">TESTE</p>
-								<p class="produto-valor">100,00</p>
-								<p class="produto-desc">Mountain-bike 24v</p>
-							</a>
-							<button class="adicionar">Comprar</button>
-						</div>
-						<div class="prod-card">
-							<a href="/">
-								<img src="imgs/old_logo.png" alt="TESTE" class="produto" />
-								<p class="produto-nome">TESTE</p>
-								<p class="produto-valor">100,00</p>
-								<p class="produto-desc">Mountain-bike 24v</p>
-							</a>
-							<button class="adicionar">Comprar</button>
-						</div>
-						<div class="prod-card">
-							<a href="/">
-								<img src="imgs/old_logo.png" alt="TESTE" class="produto" />
-								<p class="produto-nome">TESTE</p>
-								<p class="produto-valor">100,00</p>
-								<p class="produto-desc">Mountain-bike 24v</p>
-							</a>
-							<button class="adicionar">Comprar</button>
-						</div>
-						<div class="prod-card">
-							<a href="/">
-								<img src="imgs/old_logo.png" alt="TESTE" class="produto" />
-								<p class="produto-nome">TESTE</p>
-								<p class="produto-valor">100,00</p>
-								<p class="produto-desc">Mountain-bike 24v</p>
-							</a>
-							<button class="adicionar">Comprar</button>
+							<button class="adicionar">&#43;</button>
 						</div>
 					</div>
 				</section>

@@ -18,9 +18,11 @@
 	<body>
 		<!-- ============= HEADER ============== -->
 		<header class="header-mobile">
+			<a draggable="false" href="index.html" class="home">
 			<figure class="hm-logo">
 				<img draggable="false" src="imgs/logo.png" alt="Logo" />
 			</figure>
+		</a>
 			<button class="hm-shownav" onclick="callNav()">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
@@ -30,16 +32,23 @@
 				<button class="hm-hidenav" onclick="hideNav()"><p>&times;</p></button>
 				<ul class="nav-ul">
 					<li class="nav-li">
-						<a draggable="false" href="index.html" class="nav-a home"> Início</a>
-					</li>
-					<li class="nav-li">
 						<a draggable="false" href="bikeshop.html" class="nav-a bikes"
 							>Bicicletas</a
 						>
 					</li>
 					<li class="nav-li">
 						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios</a
+							>Acessórios e peças</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#sbrn" class="nav-a sbrn"
+							>Sobre nós</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#faq" class="nav-a faq"
+							>FAQ</a
 						>
 					</li>
 					<button
@@ -101,14 +110,13 @@
 							</aside>
 		</header>
 		<header class="header">
+			<a draggable="false" href="index.html" class="home">
 			<figure class="logo">
 				<img draggable="false" src="imgs/logo.png" alt="Logo" />
 			</figure>
+		</a>
 			<nav class="he-nav">
 				<ul class="nav-ul">
-					<li class="nav-li">
-						<a draggable="false" href="index.html" class="nav-a home"> Início</a>
-					</li>
 					<li class="nav-li">
 						<a draggable="false" href="bikeshop.html" class="nav-a bikes"
 							>Bicicletas</a
@@ -116,7 +124,17 @@
 					</li>
 					<li class="nav-li">
 						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios</a
+							>Acessórios e peças</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#sbrn" class="nav-a sbrn"
+							>Sobre nós</a
+						>
+					</li>
+					<li class="nav-li">
+						<a draggable="false" href="index.html#faq" class="nav-a faq"
+							>FAQ</a
 						>
 					</li>
 				</ul>
@@ -218,7 +236,7 @@
 						<span class="underline nowrap">melhor bicicleta</span> para os
 						<span class="underline nowrap">melhores ciclistas!</span>
 					</p>
-					<button><a href="bicicletas.html">Conheça nossas bikes!</a></button>
+					<button><a href="bikeshop.html">Conheça nossas bikes!</a></button>
 				</div>
 				<div class="divider-hero">
 					<svg
@@ -268,7 +286,7 @@
 					<div class="categorias"></div>
 				</a>
 			</section>
-			<section class="sobrenos">
+			<section id="sbrn" class="sobrenos">
 				<div class="sbrn-container">
 					<h2 class="container-title">
 						Como surgiu <span class="nowrap">a Bici.Net?</span>

@@ -62,6 +62,9 @@
 }
 
 /* ===== Elementos do Corpo ===== */
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: var(--FF);
 	font-size: var(--FS);
