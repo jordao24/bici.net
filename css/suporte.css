@@ -1,7 +1,0 @@
-.header {
-	background-color: rgb(from var(--AZUL-H) r g b / 40%);
-	backdrop-filter: blur(10px);
-}
-.main {
-	min-height: 90vh;
-}

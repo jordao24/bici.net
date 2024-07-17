@@ -1,0 +1,97 @@
+.header {
+	background-color: var(--AZUL-H);
+	position: sticky;
+}
+.main {
+	min-height: 90vh;
+}
+.categorias {
+	height: 40px;
+	background-color: var(--AZUL);
+	padding: 0 calc(var(--PADDING-GG) + 6em);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.cat-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--BRANCO);
+}
+.cat-button p {
+	color: var(--BRANCO);
+	transition: color 400ms;
+}
+.cat-button p:hover {
+	color: var(--LARANJA);
+}
+.slide-container {
+	display: flex;
+	justify-content: center;
+	background-color: var(--AZUL-H);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.287);
+}
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.show-up {
+	animation: 100ms fade;
+}
+.slide img {
+	height: 50vh;
+	width: 100vw;
+	object-fit: cover;
+}
+.slide img {
+	object-position: bottom center;
+}
+.bike-produtos {
+	display: flex;
+	flex-direction: column;
+	padding: var(--PADDING-GG);
+	min-height: 150vh;
+}
+.produtos-title {
+	text-align: center;
+	font-size: calc(var(--FS-TITLE) + 2rem);
+}
+.produtos {
+	margin-top: var(--MARGIN-G);
+	display: flex;
+	gap: 30px;
+}
+.produtos-categoria {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 600;
+	border-right: 1px solid black;
+	width: 200px;
+	.sub-box {
+		font-size: 16px;
+		text-indent: 1.2rem;
+		font-weight: 400;
+	}
+}
+.produtos-categoria ul li {
+	cursor: pointer;
+}
+.produtos-container {
+	display: grid;
+	gap: 40px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-auto-rows: auto;
+}
+.prod-card {
+	width: 350px;
+	height: 550px;
+	padding: var(--PADDING-M);
+	display: flex;
+	flex-direction: column;
+}
