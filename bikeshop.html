@@ -32,9 +32,6 @@
 				<button class="hm-hidenav" onclick="hideNav()"><p>&times;</p></button>
 				<ul class="nav-ul">
 					<li class="nav-li">
-						<a draggable="false" href="index.html" class="nav-a home"> Início</a>
-					</li>
-					<li class="nav-li">
 						<a draggable="false" href="bikeshop.html" class="nav-a bikes"
 							>Bicicletas</a
 						>
@@ -224,13 +221,13 @@
 		<main class="main">
 			<section class="slide-container">
 				<h2 class="page-title">BICICLETAS</h2>
-				<div class="slide show-up">
+				<div class="slide first show-up">
 					<img src="imgs/slides/slide (1).jpg" alt="Slide 1" />
 				</div>
-				<div class="slide show-up">
+				<div class="slide second show-up">
 					<img src="imgs/slides/slide (2).jpg" alt="Slide 2" />
 				</div>
-				<div class="slide show-up">
+				<div class="slide third show-up">
 					<img src="imgs/slides/slide (3).jpg" alt="Slide 3" />
 				</div>
 			</section>
@@ -254,6 +251,155 @@
 			</script>
 			<section class="bike-produtos">
 				<section class="produtos">
+					<div class="mobile-produtos-categoria">
+						<p
+							class="prod-cat-title"
+							style="text-align: center; font-size: 2.5rem; user-select: none"
+						>
+							CATEGORIAS
+						</p>
+						<button onclick="callCategorias()" class="prod-cat-arrow">
+							<svg
+								fill="#000000"
+								width="800px"
+								height="800px"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+								/>
+							</svg>
+						</button>
+						<ul class="prod-categorias">
+							<ul class="prod-cat-title">
+								<p>CATEGORIA</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="mtbhard" id="hardtail" />MTB Hardtail
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="mtbfs" id="fs" />MTB Full Suspension
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="speed" id="speed" />Speed
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="gravel" id="gravel" />Gravel
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletrica" id="eletrica" />Elétrica
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletricamtb" id="eletricamtb" />MTB
+									Elétrica
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="eletricaurb" id="eletricaurb" />Elétrica
+									Urbana
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="infantil" id="infantil" />Infantil
+								</li>
+							</ul>
+							<ul class="prod-cat-title">
+								<p>TAMANHO</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="peq" id="peq" />15-16" (P)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="med" id="med" />17-18" (M)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="lar" id="lar" />19" (G)
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="xl" id="xl" />21"+ (GG)
+								</li>
+							</ul>
+							<ul class="prod-cat-title">
+								<p>ARO</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro24" id="aro24" />Aro 24
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro26" id="aro26" />Aro 26
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro275" id="aro275" />Aro 27.5
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro29" id="aro29" />Aro 29
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aro700" id="aro700" />Aro 700
+								</li>
+							</ul>
+							<ul class="prod-cat-title">
+								<p>VELOCIDADES</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="20v" id="20v" />20 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="21v" id="21v" />21 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="22v" id="22v" />22 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="24v" id="24v" />24 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="9v" id="9v" />9 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="10v" id="10v" />10 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="11v" id="11v" />11 velocidades
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="12v" id="12v" />12 velocidades
+								</li>
+							</ul>
+							<ul class="prod-cat-title">
+								<p>MATERIAL</p>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="carbono" id="carbono" />Carbono
+								</li>
+								<li class="prod-cat-box">
+									<input type="checkbox" name="aluminio" id="aluminio" />Alumínio
+								</li>
+							</ul>
+						</ul>
+						<a href="#" id="clean">LIMPAR FILTROS</a>
+					</div>
+					<script>
+						const catBtn = document.querySelector(".prod-cat-arrow");
+						const catContainer = document.querySelector(".prod-categorias");
+						const clean = document.getElementById("clean");
+
+						function callCategorias() {
+							catContainer.style.display = "block";
+							clean.style.display = "block";
+
+							catBtn.setAttribute("onclick", "hideCategorias()");
+							catBtn.style.cssText =
+								"transition: transform 300ms; transform: scaleY(-100%);";
+							catBtn.getElementsByTagName("svg")[0].style.cssText =
+								"transition: fill 300ms; fill: var(--LARANJA);";
+						}
+
+						function hideCategorias() {
+							catContainer.style.display = "none";
+							clean.style.display = "none";
+
+							catBtn.setAttribute("onclick", "callCategorias()");
+							catBtn.style.cssText =
+								"transition: transform 300ms; transform: scaleY(100%);";
+							catBtn.getElementsByTagName("svg")[0].style.cssText =
+								"transition: fill 300ms;fill: var(--AZUL);";
+						}
+					</script>
 					<aside class="produtos-categoria">
 						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
@@ -285,8 +431,6 @@
 									<input type="checkbox" name="infantil" id="infantil" />Infantil
 								</li>
 							</ul>
-						</ul>
-						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
 								<p>TAMANHO</p>
 								<li class="prod-cat-box">
@@ -302,8 +446,6 @@
 									<input type="checkbox" name="xl" id="xl" />21"+ (GG)
 								</li>
 							</ul>
-						</ul>
-						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
 								<p>ARO</p>
 								<li class="prod-cat-box">
@@ -322,8 +464,6 @@
 									<input type="checkbox" name="aro700" id="aro700" />Aro 700
 								</li>
 							</ul>
-						</ul>
-						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
 								<p>VELOCIDADES</p>
 								<li class="prod-cat-box">
@@ -351,8 +491,6 @@
 									<input type="checkbox" name="12v" id="12v" />12 velocidades
 								</li>
 							</ul>
-						</ul>
-						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
 								<p>MATERIAL</p>
 								<li class="prod-cat-box">
@@ -363,7 +501,7 @@
 								</li>
 							</ul>
 						</ul>
-						<a href="#">LIMPAR FILTROS</a>
+						<a href="#" id="clean">LIMPAR FILTROS</a>
 					</aside>
 					<div class="produtos-container">
 						<div class="prod-card">
@@ -556,7 +694,9 @@
 			</section>
 			<section class="fo-right">
 				<p class="fb-p">
-					Todos os direitos reservados para Bici.Net&copy;<span id="date"></span>
+					Tudo que foi utilizado nesse projeto pertence as suas devidas marcas, todo
+					o material utilizdo não tem nenhum fim lucrativo ou real, somente como
+					exemplo.
 				</p>
 			</section>
 		</footer>
