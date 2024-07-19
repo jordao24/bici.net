@@ -73,7 +73,7 @@
 }
 .prod-card {
 	width: 350px;
-	height: 550px;
+	height: 750px;
 	padding: var(--PADDING-M);
 	display: flex;
 	flex-direction: column;
@@ -86,15 +86,22 @@
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	height: 90%;
 	margin-bottom: 40px;
 	.produto-nome {
 		font-size: calc(var(--FS) + 0.7rem);
 		font-weight: 1000;
 	}
+	.produto-valor {
+		font-size: calc(var(--FS) + 0.2rem);
+		font-weight: 500;
+		color: var(--LARANJA);
+	}
 	.produto-valor:before {
 		content: "R$ ";
 	}
 	.produto-desc {
+		height: 60%;
 		font-size: calc(var(--FS) - 0.1rem);
 	}
 }
@@ -102,6 +109,8 @@
 	width: 40px;
 	height: 40px;
 	background-color: var(--AZUL);
+	text-align: center;
+	align-content: center;
 	align-self: flex-end;
 	color: var(--BRANCO);
 	font-weight: 800;
@@ -189,7 +198,7 @@
 	.prod-card {
 		border-radius: 25px;
 		width: 300px;
-		height: 500px;
+		height: 800px;
 	}
 }
 
@@ -202,8 +211,8 @@
 		object-position: bottom center;
 	}
 	.bike-produtos {
-		padding: var(--PADDING-P);
-		min-height: 200vh;
+		padding: var(--PADDING-GG);
+		min-height: 500vh;
 	}
 	.produtos {
 		display: flex;
@@ -262,7 +271,7 @@
 	.prod-card {
 		border-radius: 25px;
 		width: auto;
-		height: 600px;
+		height: 750px;
 	}
 }
 
@@ -335,7 +344,7 @@
 	.prod-card {
 		border-radius: 25px;
 		width: auto;
-		height: 600px;
+		height: 750px;
 	}
 }
 
