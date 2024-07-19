@@ -54,16 +54,6 @@
 	--SHADOW-OFFSET-P: 0.2em; /* 4px */
 }
 
-/* ===== Animations ===== */
-@keyframes scroll {
-	from {
-		transform: translateX(-50%);
-	}
-	to {
-		transform: translateX(calc(1500px + 50%));
-	}
-}
-
 /* ===== Elementos Extras ===== */
 .underline {
 	text-decoration: underline;
@@ -364,7 +354,7 @@ body {
 	/* SHOWDOWN */
 	.showdown {
 		height: 50vh;
-		padding: var(--PADDING-G) calc(var(--PADDING-GG) + 5em);
+		padding: var(--PADDING-GG) calc(var(--PADDING-GG) + 5em);
 		display: flex;
 		justify-content: space-evenly;
 		.sd-box {
@@ -420,50 +410,6 @@ body {
 			transform: scale(110%);
 		}
 	}
-	/* HORIZONTAL SCROLL IMAGES */
-	.scroll {
-		position: relative;
-		display: flex;
-		width: 100vw;
-		overflow: hidden;
-		mask-image: linear-gradient(
-			90deg,
-			transparent,
-			#fff 20%,
-			#fff 80%,
-			transparent
-		);
-	}
-	.scroll div {
-		width: fit-content;
-		white-space: nowrap;
-		animation: scroll 10s linear infinite;
-		justify-content: space-between;
-	}
-	.scroll div span {
-		display: inline-flex;
-		align-items: center;
-		border-radius: 12px;
-		transition: 0.5s;
-		scale: 1;
-	}
-	.scroll div span:hover {
-		scale: 1.2;
-	}
-	.brand-logos div {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-	}
-	.brand-logos svg {
-		width: 300px;
-		height: 100px;
-		scale: 0.8;
-	}
-	.santacruz svg {
-		scale: 1.5;
-	}
-
 	/* SOBRE NÓS */
 	.sobrenos {
 		scroll-margin-top: 180px;
