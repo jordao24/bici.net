@@ -2,7 +2,8 @@
 	"produtos": "Bicicletas",
 	"mountainBikes": [
 		{
-			"imagem": "js/json/imgs/slash98/trans.webp",
+			"id": "3015",
+			"imagem": "/imgs/slash98/trans.webp",
 			"nome": "Slash 9.8 AXS Geração 6",
 			"nomeAbrev": "Slash 9.8 6º Gen",
 			"valor": "74.299,99",
@@ -12,13 +13,15 @@
 					"tipo": "Full Suspension",
 					"aroDiant": "29",
 					"aroTras": "27.5",
-					"material": "Carbono"
+					"material": "Carbono",
+					"velocidades": "12"
 				}
 			],
 			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-para-trilhas/slash/slash-9-8-gx-axs-t-type-6%C2%AA-gera%C3%A7%C3%A3o/p/41684/?colorCode=greendark"
 		},
 		{
-			"imagem": "js/json/imgs/procaliber98/trans.webp",
+			"id": "420",
+			"imagem": "/imgs/procaliber98/trans.webp",
 			"nome": "Procaliber 9.8",
 			"nomeAbrev": "Procaliber 9.8",
 			"valor": "33.079,00",
@@ -27,7 +30,8 @@
 				{
 					"tipo": "Hardtail",
 					"aro": "29",
-					"material": "Carbono"
+					"material": "Carbono",
+					"velocidades": "12"
 				}
 			],
 			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-para-cross-country/procaliber/procaliber-9-8/p/35115/?colorCode=grey_black"
