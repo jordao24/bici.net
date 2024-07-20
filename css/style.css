@@ -142,6 +142,9 @@ body {
 		font-size: var(--FS-HEADER);
 		font-weight: bold;
 	}
+	.contador {
+		min-width: 20px;
+	}
 	.carrinho svg {
 		width: 24px;
 		height: 24px;
@@ -422,15 +425,16 @@ body {
 	/* SOBRE NÓS */
 	.sobrenos {
 		scroll-margin-top: 180px;
-		margin: var(--MARGIN-M) 0;
+		margin: var(--MARGIN-GG) var(--MARGIN-M);
 		height: 50vh;
 		padding: var(--PADDING-M) calc(var(--PADDING-GG) + 5em);
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: center;
+		gap: 35px;
+
 		.sbrn-container {
-			width: 50%;
+			width: 30%;
 			display: grid;
 			place-content: center;
 		}
@@ -441,6 +445,7 @@ body {
 		.container-p {
 			font-size: var(--FS-HEADER);
 			text-indent: 4rem;
+			text-align: justify;
 		}
 		.container-p:first-of-type {
 			margin-bottom: var(--MARGIN-M);

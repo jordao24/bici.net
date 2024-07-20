@@ -18,6 +18,45 @@
 
 */
 
+function atualizarValorTotal() {
+	let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+	const valorTotal = document.querySelectorAll("#valor-total");
+
+	let total = 0;
+
+	if (carrinho.length > 0) {
+		carrinho.forEach((bicicleta) => {
+			// Supondo que bicicleta.valor seja algo como "1.234,56"
+			let valorStr = bicicleta.valor;
+
+			// Remove o separador de milhar e substitui a vírgula por ponto
+			valorStr = valorStr.replace(".", "").replace(",", ".");
+
+			// Converte a string para número
+			const valor = parseFloat(valorStr);
+
+			// Usa 1 como quantidade padrão, se não houver valor
+			const quantidade = bicicleta.qty || 1;
+
+			// Adiciona o valor total do item ao total geral
+			total += valor * quantidade;
+		});
+	}
+
+	// Função para formatar o valor total com separadores de milhar
+	function formatarValor(valor) {
+		return valor
+			.toFixed(2)
+			.replace(".", ",")
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+	}
+
+	// Atualiza o valor total no DOM
+	valorTotal.forEach((element) => {
+		element.innerHTML = total === 0 ? "0,00" : formatarValor(total);
+	});
+}
+
 window.addEventListener("DOMContentLoaded", () => {
 	fetch("js/json/bicicletas.json")
 		.then((response) => response.json())
@@ -90,6 +129,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 
 	atualizarCarrinho();
+	atualizarValorTotal();
 });
 
 function addCarrinho(button) {
@@ -116,7 +156,16 @@ function addCarrinho(button) {
 		carrinho[bicicletaIndex] = bicicleta;
 	}
 
+	button.style.backgroundColor = "green";
+	button.innerHTML = "✔ Adicionado";
+
+	setTimeout(() => {
+		button.style.backgroundColor = ""; // Restaura a cor original
+		button.innerHTML = "Adicionar ao carrinho"; // Restaura o texto original
+	}, 1200);
+
 	atualizarCarrinho();
+	atualizarValorTotal();
 }
 
 function atualizarCarrinho() {
@@ -162,7 +211,10 @@ function atualizarCarrinho() {
 		const qty = document.createElement("input");
 		qty.setAttribute("type", "number");
 		qty.setAttribute("id", "quantidade");
-		qty.setAttribute("value", "1");
+		qty.setAttribute("value", bicicleta.qty || "1");
+		qty.addEventListener("change", () =>
+			atualizarQuantidade(bicicleta.id, qty.value)
+		);
 
 		const removeButton = document.createElement("button");
 		removeButton.setAttribute("data-id", bicicleta.id);
@@ -189,7 +241,24 @@ function atualizarCarrinho() {
 
 		mobileCarrinhoContent.appendChild(carProdutoClone);
 		carrinhoContent.appendChild(carProduto);
+
+		atualizarValorTotal();
 	});
+}
+
+function atualizarQuantidade(itemID, quantidade) {
+	let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+	carrinho = carrinho.map((item) => {
+		if (item.id === itemID) {
+			item.qty = parseInt(quantidade, 10);
+		}
+		return item;
+	});
+
+	localStorage.setItem("carrinho", JSON.stringify(carrinho));
+	atualizarCarrinho();
+	atualizarValorTotal();
 }
 
 function clearCarrinho() {
@@ -202,6 +271,7 @@ function clearCarrinho() {
 	});
 
 	atualizarCarrinho();
+	atualizarValorTotal();
 }
 
 function removeItem(itemID) {
@@ -212,4 +282,5 @@ function removeItem(itemID) {
 	localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
 	atualizarCarrinho();
+	atualizarValorTotal();
 }
