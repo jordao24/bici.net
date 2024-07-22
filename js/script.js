@@ -1,23 +1,3 @@
-/* 
-
-[Serão necessários algumas funções para alcançar um sistema de produtos estavél. A começar por:]
-
-+ Uma função que puxa os produtos através de um arquivo JSON. 
-
-+ Arquivo JSON:
-    - Futuramente criar um sistema pelo servidor para adicionar e excluir produtos.
-    - Esse produto terá 5 condicionantes:
-        + 1- Imagem. 2- Nome. 3- Preço, 4- Descrição, 5- Tamanho. 6- Categorias.
-    - Ele seguirá uma página base, sem nenhum dado realmente integrado.
-    - Essa página poderá ser editada com novas sub-condionantes, por exemplo:
-        + Opiniões e vídeos.
-
-+ Integração desse arquivo JSON em duas partes:
-    - Bicicletas; Acessórios e peças.
-    - Showdown dos produtos.
-
-*/
-
 function atualizarValorTotal() {
 	let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 	const valorTotal = document.querySelectorAll("#valor-total");
