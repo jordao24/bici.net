@@ -239,7 +239,25 @@
 				</div>
 			</section>
 			<section class="showdown">
-				<a class="sd-box" id="produtos sd-bicicleta">
+				<a class="sd-box sd-bicicleta">
+					<img draggable="false" src="" alt="" class="sd-img" />
+					<div class="container">
+						<p class="sd-marca"></p>
+						<p class="sd-title"></p>
+						<p class="sd-preco"></p>
+						<p class="sd-desc"></p>
+					</div>
+				</a>
+				<a class="sd-box sd-bicicleta">
+					<img draggable="false" src="" alt="" class="sd-img" />
+					<div class="container">
+						<p class="sd-marca"></p>
+						<p class="sd-title"></p>
+						<p class="sd-preco"></p>
+						<p class="sd-desc"></p>
+					</div>
+				</a>
+				<a class="sd-box sd-acessorios">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
 						<p class="sd-title"></p>
@@ -247,23 +265,7 @@
 					</div>
 					<div class="categorias"></div>
 				</a>
-				<a class="sd-box" id="produtos sd-bicicleta">
-					<img draggable="false" src="" alt="" class="sd-img" />
-					<div class="container">
-						<p class="sd-title"></p>
-						<p class="sd-preco"></p>
-					</div>
-					<div class="categorias"></div>
-				</a>
-				<a class="sd-box" id="produtos sd-acessorios">
-					<img draggable="false" src="" alt="" class="sd-img" />
-					<div class="container">
-						<p class="sd-title"></p>
-						<p class="sd-preco"></p>
-					</div>
-					<div class="categorias"></div>
-				</a>
-				<a class="sd-box" id="produtos sd-acessorios">
+				<a class="sd-box sd-acessorios">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
 						<p class="sd-title"></p>
@@ -272,6 +274,65 @@
 					<div class="categorias"></div>
 				</a>
 			</section>
+			<script>
+				function renderizarBicicletasAleatorias() {
+					fetch("js/json/bicicletas.json")
+						.then((response) => response.json())
+						.then((items) => {
+							let bicicletas = items.bicicletas;
+
+							// Embaralha o array de bicicletas
+							bicicletas = bicicletas.sort(() => Math.random() - 0.5);
+
+							// Seleciona duas bicicletas diferentes
+							const bicicleta1 = bicicletas[0];
+							const bicicleta2 = bicicletas[1];
+
+							// Atualiza os elementos com as informações das bicicletas
+							const elementos = document.querySelectorAll(".sd-bicicleta");
+
+							const atualizarElemento = (elemento, bicicleta) => {
+								const img = elemento.querySelector("img");
+								const marca = elemento.querySelector("p.sd-marca");
+								const titulo = elemento.querySelector("p.sd-title");
+								const preco = elemento.querySelector("p.sd-preco");
+								const descricao = elemento.querySelector("p.sd-desc");
+
+								// Atualiza imagem, título e preço
+								img.setAttribute("src", bicicleta.imagem);
+								marca.innerHTML = bicicleta.marca;
+								titulo.innerHTML = bicicleta.nomeAbrev;
+								preco.innerHTML = bicicleta.valor;
+
+								// Atualiza descrição (resumida para 20 palavras)
+								const descricaoResumida =
+									bicicleta.desc.split(" ").slice(0, 20).join(" ") +
+									(bicicleta.desc.split(" ").length > 20 ? "..." : "");
+
+								if (descricao) {
+									descricao.innerHTML = descricaoResumida;
+								}
+
+								// Atualiza o link para o produto específico
+								const link = elemento;
+								link.setAttribute("href", bicicleta.url);
+							};
+
+							if (elementos.length > 0) {
+								atualizarElemento(elementos[0], bicicleta1);
+							}
+							if (elementos.length > 1) {
+								atualizarElemento(elementos[1], bicicleta2);
+							}
+						})
+						.catch((err) => {
+							console.error("Erro ao carregar os dados das bicicletas:", err);
+						});
+				}
+
+				// Chama a função para renderizar bicicletas aleatórias
+				renderizarBicicletasAleatorias();
+			</script>
 			<section id="sbrn" class="sobrenos">
 				<div class="sbrn-container">
 					<h2 class="container-title">

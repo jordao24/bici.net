@@ -201,12 +201,13 @@ body {
 	}
 	.car-produto {
 		width: 100%;
-		height: 200px;
+		height: clamp(190px, 210px);
 		background-color: var(--BRANCO);
 		margin-bottom: 16px;
 		padding: 1.5rem 1rem;
 		display: grid;
 		grid-template-areas:
+			"a a f ."
 			"a a b ."
 			"a a c e"
 			"a a d .";
@@ -215,6 +216,13 @@ body {
 		height: auto;
 		width: 120px;
 		grid-area: a;
+		margin-right: 5px;
+	}
+	.prod-marca {
+		grid-area: f;
+		font-size: calc(var(--FS) + 0);
+		color: var(--AZUL-H);
+		font-weight: 300;
 	}
 	.prod-nome {
 		grid-area: b;
@@ -234,6 +242,8 @@ body {
 		width: 50px;
 		background-color: transparent;
 		border: none;
+		font-size: var(--FS-HEADER);
+		text-align: center;
 	}
 	#remove {
 		background-color: transparent;
@@ -370,13 +380,15 @@ body {
 		display: flex;
 		justify-content: space-evenly;
 		.sd-box {
-			padding: var(--PADDING-GG) var(--PADDING-M);
+			overflow: hidden;
+			padding: var(--PADDING-P) var(--PADDING-M);
 			height: 384px;
 			width: 264px;
 			background-color: var(--BRANCO);
 			border: 2px solid var(--AZUL);
 			border-radius: 15px;
 			cursor: pointer;
+			position: relative;
 			text-decoration: none;
 			color: black;
 			box-shadow: 0 var(--SHADOW-Y-P) var(--SHADOW-BLUR-G) 4px
@@ -384,26 +396,47 @@ body {
 			display: grid;
 			grid-template-rows: 2fr 3fr 1fr;
 			justify-items: center;
-			transition: transform 400ms;
+			transition: scale 400ms;
+		}
+		.sd-box::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 120px; /* Ajuste a altura conforme necessário */
+			background: linear-gradient(to bottom, transparent, var(--BRANCO));
+			z-index: 1; /* Coloca o degradê sobre o conteúdo */
 		}
 		.sd-img {
-			height: 164px;
-			width: 196px;
+			height: 112px;
+			width: auto;
 			margin-bottom: var(--MARGIN-PP);
+			transition: scale 500ms;
+		}
+		.sd-img:hover {
+			scale: 1.2;
 		}
 		.sd-box .container {
 			justify-self: left;
 			margin-bottom: var(--MARGIN-P);
 		}
+		.sd-marca {
+			font-size: calc(var(--FS) + 0.2rem);
+			color: var(--AZUL-H);
+		}
 		.sd-title {
 			font-weight: 600;
-			font-size: 1.2rem;
+			font-size: calc(var(--FS) + 0.4rem);
+			color: var(--AZUL);
 		}
 		.sd-preco {
-			padding-left: 16px;
+			text-align: right;
+			color: var(--LARANJA);
+			margin-bottom: var(--MARGIN-PP);
 		}
 		.sd-preco:before {
-			content: "R$";
+			content: "R$ ";
 		}
 		.categorias {
 			justify-self: left;
@@ -419,7 +452,7 @@ body {
 			border-radius: 16px;
 		}
 		.sd-box:hover {
-			transform: scale(110%);
+			scale: 1.02;
 		}
 	}
 	/* SOBRE NÓS */

@@ -57,44 +57,111 @@ function atualizarValorTotal() {
 	});
 }
 
+function filtrarProdutos() {
+	const categoriasVerificadas = document.querySelectorAll(
+		".prod-checkbox:checked"
+	);
+	const categoriasSelecionadas = Array.from(categoriasVerificadas).map(
+		(checkbox) => checkbox.id
+	);
+
+	console.log(categoriasVerificadas);
+	console.log(categoriasSelecionadas);
+
+	const prodCard = document.querySelectorAll(".prod-card");
+	prodCard.forEach((produto) => {
+		const categoriasProduto = produto.getAttribute("data-categoria").split(", ");
+		const exibirProduto = categoriasSelecionadas.every((categoria) =>
+			categoriasProduto.includes(categoria)
+		);
+		produto.style.display = exibirProduto ? "flex" : "none";
+	});
+
+	console.log(prodCard);
+}
+
+const checkboxes = document.querySelectorAll(".prod-checkbox");
+
+checkboxes.forEach((checkbox) => {
+	checkbox.addEventListener("change", filtrarProdutos);
+});
+
 window.addEventListener("DOMContentLoaded", () => {
 	fetch("js/json/bicicletas.json")
 		.then((response) => response.json())
-		.then((bicicletas) => {
-			let mountainBikes = bicicletas.mountainBikes;
+		.then((items) => {
+			let bicicletas = items.bicicletas;
+
 			const container = document.getElementById("bicicletas");
 
 			// Armazena os itens em um mapa para acesso rápido
 			const itensMap = {};
-			mountainBikes.forEach((modelo) => {
+			bicicletas.forEach((modelo) => {
 				itensMap[modelo.id] = modelo; // Supondo que cada modelo tem um campo id único
 			});
 
 			// Salva o mapa de itens no localStorage
 			localStorage.setItem("itensMap", JSON.stringify(itensMap));
 
-			mountainBikes.forEach(function (modelo) {
+			bicicletas.forEach(function (modelo) {
 				const prodCard = document.createElement("div");
 
 				let categorias = modelo.categorias;
-				if (typeof categorias === "string") {
-					categorias = categorias.split(/\s+/);
+
+				// Função para extrair categorias de um objeto ou array
+				function extrairCategorias(categorias) {
+					let categoriasValidas = [];
+
+					categorias.forEach((categoria) => {
+						if (typeof categoria === "string" && categoria.trim()) {
+							categoriasValidas.push(categoria.trim());
+						} else if (typeof categoria === "object" && categoria !== null) {
+							// Se a categoria for um objeto ou array, percorra suas propriedades
+							for (let key in categoria) {
+								if (Array.isArray(categoria[key])) {
+									categoriasValidas = categoriasValidas.concat(
+										extrairCategorias(categoria[key])
+									);
+								} else if (
+									typeof categoria[key] === "string" &&
+									categoria[key].trim()
+								) {
+									categoriasValidas.push(categoria[key].trim());
+								}
+							}
+						}
+					});
+
+					return categoriasValidas;
 				}
 
+				// Extrair categorias válidas
+				let categoriasValidas = extrairCategorias(categorias);
+
 				prodCard.classList.add("prod-card");
-				categorias.forEach((categoria) => {
-					if (typeof categoria === "string" && categoria.trim()) {
-						prodCard.classList.add(categoria.trim());
-					}
-				});
+
+				// Definir o atributo data-categoria com as categorias concatenadas
+				if (categoriasValidas.length > 0) {
+					prodCard.setAttribute("data-categoria", categoriasValidas.join(", "));
+				}
 
 				const prodCardURL = document.createElement("a");
 				prodCardURL.classList.add("prod-card-container");
 				prodCardURL.setAttribute("href", modelo.url);
+				prodCardURL.setAttribute("target", "_blank");
+
+				const prodImgContainer = document.createElement("figure");
+				prodImgContainer.classList.add("produto-figure");
 
 				const prodImg = document.createElement("img");
 				prodImg.classList.add("produto");
 				prodImg.setAttribute("src", modelo.imagem);
+
+				prodImgContainer.appendChild(prodImg);
+
+				const prodMarca = document.createElement("p");
+				prodMarca.classList.add("produto-marca");
+				prodMarca.innerHTML = modelo.marca;
 
 				const prodNome = document.createElement("p");
 				prodNome.classList.add("produto-nome");
@@ -104,22 +171,23 @@ window.addEventListener("DOMContentLoaded", () => {
 				prodValor.classList.add("produto-valor");
 				prodValor.innerHTML = modelo.valor;
 
-				const prodDesc = document.createElement("p");
-				prodDesc.classList.add("produto-desc");
-				prodDesc.innerHTML = modelo.desc;
-
 				const prodAdd = document.createElement("button");
 				prodAdd.classList.add("adicionar");
 				prodAdd.setAttribute("onclick", "addCarrinho(this)"); // Adiciona o ID ao atributo data-id
 				prodAdd.setAttribute("data-id", modelo.id); // Adiciona o ID ao atributo data-id
-				prodAdd.innerHTML = "Adicionar ao carrinho";
+				prodAdd.innerHTML = "&#43;";
 
-				prodCardURL.appendChild(prodImg);
+				const prodDesc = document.createElement("p");
+				prodDesc.classList.add("produto-desc");
+				prodDesc.innerHTML = modelo.desc;
+
+				prodCardURL.appendChild(prodImgContainer);
+				prodCardURL.appendChild(prodMarca);
 				prodCardURL.appendChild(prodNome);
 				prodCardURL.appendChild(prodValor);
+				prodCard.appendChild(prodAdd);
 				prodCardURL.appendChild(prodDesc);
 				prodCard.appendChild(prodCardURL);
-				prodCard.appendChild(prodAdd);
 
 				container.appendChild(prodCard);
 			});
@@ -130,6 +198,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	atualizarCarrinho();
 	atualizarValorTotal();
+	renderizarBicicletasAleatorias();
 });
 
 function addCarrinho(button) {
@@ -156,12 +225,17 @@ function addCarrinho(button) {
 		carrinho[bicicletaIndex] = bicicleta;
 	}
 
-	button.style.backgroundColor = "green";
-	button.innerHTML = "✔ Adicionado";
+	button.innerHTML = "";
+	setTimeout(() => {
+		button.innerHTML = "✔ Adicionado ao Carrinho";
+	}, 200);
+	button.style.cssText =
+		"background-color: green; width: 80%; border-radius: 15px; transition: border-radius 400ms, width 300ms;";
 
 	setTimeout(() => {
-		button.style.backgroundColor = ""; // Restaura a cor original
-		button.innerHTML = "Adicionar ao carrinho"; // Restaura o texto original
+		button.style.cssText =
+			"width: 40px; border-radius: none; transition: width 300ms, border-radius 400ms, background-color: 400ms;";
+		button.innerHTML = "&#43;";
 	}, 1200);
 
 	atualizarCarrinho();
@@ -200,6 +274,10 @@ function atualizarCarrinho() {
 		carImg.classList.add("prod-img");
 		carImg.setAttribute("src", bicicleta.imagem);
 
+		const carMarca = document.createElement("p");
+		carMarca.classList.add("prod-marca");
+		carMarca.innerHTML = bicicleta.marca;
+
 		const carNome = document.createElement("p");
 		carNome.classList.add("prod-nome");
 		carNome.innerHTML = bicicleta.nomeAbrev;
@@ -226,6 +304,7 @@ function atualizarCarrinho() {
 			'<svg class="remove" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M267.33-120q-27.5 0-47.08-19.58-19.58-19.59-19.58-47.09V-740H160v-66.67h192V-840h256v33.33h192V-740h-40.67v553.33q0 27-19.83 46.84Q719.67-120 692.67-120H267.33Zm425.34-620H267.33v553.33h425.34V-740Zm-328 469.33h66.66v-386h-66.66v386Zm164 0h66.66v-386h-66.66v386ZM267.33-740v553.33V-740Z"/></svg>';
 
 		carProduto.appendChild(carImg);
+		carProduto.appendChild(carMarca);
 		carProduto.appendChild(carNome);
 		carProduto.appendChild(carValor);
 		carProduto.appendChild(qty);

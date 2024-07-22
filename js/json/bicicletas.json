@@ -1,10 +1,10 @@
 {
 	"produtos": "Bicicletas",
-	"mountainBikes": [
+	"bicicletas": [
 		{
 			"id": "3015",
 			"imagem": "/imgs/slash98/trans.webp",
-			"nome": "Slash 9.8 AXS Geração 6",
+			"marca": "Trek",
 			"nomeAbrev": "Slash 9.8 6º Gen",
 			"valor": "74.299,99",
 			"desc": "A Slash 9.8 GX AXS Tipo T é uma mountain bike enduro de fibra de carbono, projetada para descidas desafiadoras. Possui quadro OCLV Carbon e suspensão de pivô alto, proporcionando tração e capacidade de enfrentar rochedos. Tem rodas de 29' na frente e 27,5' atrás para um manejo ágil, e suspensão RockShox para suportar terrenos difíceis. Equipada com transmissão sem fio SRAM GX AXS, garante mudanças de marcha precisas, mesmo sob carga.",
@@ -15,7 +15,14 @@
 					"aroDiant": "29",
 					"aroTras": "27.5",
 					"material": "Carbono",
-					"velocidades": "12"
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
 				}
 			],
 			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-para-trilhas/slash/slash-9-8-gx-axs-t-type-6%C2%AA-gera%C3%A7%C3%A3o/p/41684/?colorCode=greendark"
@@ -23,7 +30,7 @@
 		{
 			"id": "420",
 			"imagem": "/imgs/procaliber98/trans.webp",
-			"nome": "Procaliber 9.8",
+			"marca": "Trek",
 			"nomeAbrev": "Procaliber 9.8",
 			"valor": "33.079,00",
 			"desc": "A ProCaliber 9.8 é a campeã da família. Trata-se de uma hardtail para cross country feita para ciclistas que pedalam para vencer, com um quadro IsoSpeed de carbono que absorve a vibração das trilhas sem sacrificar a eficiência, um levíssimo garfo FOX que dispara nas descidas técnicas e uma suave transmissão Shimano XT.",
@@ -33,10 +40,609 @@
 					"tipo": "Hardtail",
 					"aro": "29",
 					"material": "Carbono",
-					"velocidades": "12"
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
 				}
 			],
 			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-para-cross-country/procaliber/procaliber-9-8/p/35115/?colorCode=grey_black"
+		},
+		{
+			"id": "001",
+			"imagem": "/imgs/stumpjumper/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Stumpjumper",
+			"valor": "17.000,00",
+			"desc": "Cinemática de suspensão incomparável, pilotagem sublime, rigidez do quadro perfeitamente ajustada – a Stumpjumper Comp é nossa bicicleta de trilha definitiva com todos os recursos, totalmente acessível e totalmente em carbono. Geometria e suspensão totalmente novas, componentes escolhidos a dedo – está pronta para te levar aonde quer que a trilha vá.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Full Suspension",
+					"aro": "29",
+					"material": "Carbono",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-stumpjumper-comp/p/199786?color=323301-199786"
+		},
+		{
+			"id": "002",
+			"imagem": "/imgs/fuelex86gen/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Fuel EX 8 6º Gen",
+			"valor": "22.199,99",
+			"desc": "A Fuel EX 8 é uma bicicleta de trilhas feita para ciclistas que buscam descidas desafiadoras e um pedalar prazeroso de volta ao topo. Com um quadro de alumínio robusto e transmissão Shimano XT para trocas de marchas suaves, ela possui um garfo Fox Rhythm de 150 mm e um amortecedor Fox Float X para melhor controle. Além disso, oferece armazenamento no quadro e geometria ajustável, similar ao modelo de carbono, mas com um preço mais acessível.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Full Suspension",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-para-trilhas/fuel-ex/fuel-ex-8-6%C2%AA-gera%C3%A7%C3%A3o/p/36348/?colorCode=grey_black"
+		},
+		{
+			"id": "003",
+			"imagem": "/imgs/cattura pro t-20 xt/trans.webp",
+			"marca": "OGGI",
+			"nomeAbrev": "Cattura Pro T-20",
+			"valor": "29.990,00",
+			"desc": "A OGGI Bikes tem o orgulho de apresentar a Cattura Pro T-20 XT, uma bicicleta projetada para enfrentar trilhas desafiadoras, competições de XCO e Maratonas com máxima eficiência. Esta nova versão vem equipada com o mais moderno em tecnologia de mountain biking, destacando-se pelo seu novo quadro de carbono super light, compatível com os sistemas Sram t-type e Shimano com UDH, garantindo uma performance inigualável.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Full Suspension",
+					"aro": "29",
+					"material": "Carbono",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://oggibikes.com.br/bike/potenza/"
+		},
+		{
+			"id": "004",
+			"imagem": "/imgs/legend/trans.png",
+			"marca": "South",
+			"nomeAbrev": "Legend 2023",
+			"valor": "1.421,75",
+			"desc": "A South Legend 2023 é a escolha definitiva para entusiastas do MTB. Com um quadro resistente, suspensão dianteira e câmbios Shimano, oferece desempenho superior em trilhas desafiadoras.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Entrada",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "21",
+					"tamanhos": [
+						{
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.giant-bicycles.com/br/talon-3"
+		},
+		{
+			"id": "005",
+			"imagem": "/imgs/f-si hi-mod 1/trans.webp",
+			"marca": "Cannondale",
+			"nomeAbrev": "F-Si Hi-MOD 1",
+			"valor": "45.979,90",
+			"desc": "A Cannondale F-Si Hi-MOD 1 é uma bicicleta de cross-country de alto desempenho, equipada com um quadro de carbono Hi-MOD leve e rígido, suspensão Lefty Ocho Carbon, e transmissão Shimano XTR de 12 velocidades. Com freios a disco hidráulicos XTR e geometria agressiva, é ideal para ciclistas que buscam velocidade, controle superior e eficiência em trilhas técnicas.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Hardtail",
+					"aro": "29",
+					"material": "Carbono",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.cannondale.com/en/bikes/mountain/trail/trail-7"
+		},
+		{
+			"id": "006",
+			"imagem": "/imgs/rockhopper/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Rockhopper Comp 29",
+			"valor": "4.000,00",
+			"desc": "A Rockhopper Comp é uma bicicleta de alta ação com um quadro de Alumínio Premium A1. Conta com um garfo SR SunTour XCM, rodas Stout, freios hidráulicos Tektro e uma transmissão Shimano 1x10. Projetada para oferecer desempenho emocionante e confiável em trilhas.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Hardtail",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "10",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/rockhopper-comp-29/p/218527?color=354968-218527"
+		},
+		{
+			"id": "007",
+			"imagem": "/imgs/rail7/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Rail 7 3º Gen",
+			"valor": "66.500,00",
+			"desc": "A Rail 7 é uma mountain bike elétrica para longos percursos construída para enfrentar os maiores desafios. Ela apresenta a mesma tecnologia de alto padrão em trilhas que as nossas bicicletas padrões, um garfo atualizado, transmissão, bateria e muito mais, além de um potente sistema de acionamento Bosch, que é basicamente como ter seu próprio serviço de transporte.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "MTB Elétrica",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/mountain-bikes/mountain-bikes-el%C3%A9tricas/rail/rail-7-3%C2%AA-gera%C3%A7%C3%A3o/p/36792/?colorCode=purpledark"
+		},
+		{
+			"id": "008",
+			"imagem": "/imgs/potenza/trans.webp",
+			"marca": "OGGI",
+			"nomeAbrev": "Potenza",
+			"valor": "65.990,00",
+			"desc": "A Potenza é a mountain bike elétrica capaz de te levar até o topo das subidas mais longas - sem a necessidade de uma carona ou de um pulmão extra - e rasgar qualquer descida.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "MTB Elétrica",
+					"aro": "29",
+					"material": "Carbono",
+					"velocidades": "12",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://oggibikes.com.br/bike/potenza/"
+		},
+		{
+			"id": "009",
+			"imagem": "/imgs/bigwheel86/trans.webp",
+			"marca": "OGGI",
+			"nomeAbrev": "Big Wheel 8.6",
+			"valor": "26.799,90",
+			"desc": "A Big Wheel 8.6 é uma bicicleta elétrica para trilhas criada para quem quer encarar novos desafios de forma descomplicada. Para isso, ela aposta na simplicidade de uma hardtail com geometria moderna e agressiva, combinada com um sistema eletrônico super avançado, capaz de realizar trocas automáticas e até sem pedalar. ",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "MTB Elétrica",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "11",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://oggibikes.com.br/bike/nova-e-bike-big-wheel-8-6/"
+		},
+		{
+			"id": "010",
+			"imagem": "/imgs/vulcan/trans.webp",
+			"marca": "Caloi",
+			"nomeAbrev": "Vulcan",
+			"valor": "1.499,00",
+			"desc": "A Mountain Bike de entrada para trilhas leves, a Vulcan conta com quadro de alumínio, 21 velocidades, freio a Disco mecânico, suspensão dianteira e o melhor: um preço que cabe no bolso.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Entrada",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "21",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)"
+						}
+					]
+				}
+			],
+			"url": "https://www.caloi.com.br/vulcan"
+		},
+		{
+			"id": "011",
+			"imagem": "/imgs/hackersport/trans.webp",
+			"marca": "OGGI",
+			"nomeAbrev": "Hacker Sport",
+			"valor": "1.999,00",
+			"desc": "Na rua, no parque, na ciclovia ou no estradão, a Hacker Sport é ideal para quem quer ir mais longe, fazendo um investimento em uma bike acessível, mas de altissima qualidade. Além do grupo Shimano Tourney de 21 marchas, ela já vem com freio a disco, quadro e rodas de alumínio, e também uma suspensão dianteira para deixar suas pedaladas mais confortáveis.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Entrada",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "21",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://oggibikes.com.br/bike/hacker-sport/"
+		},
+		{
+			"id": "012",
+			"imagem": "/imgs/impactpro/trans.webp",
+			"marca": "Sense",
+			"nomeAbrev": "One",
+			"valor": "2.199,00",
+			"desc": "A Sense One oferece a experiência do MTB com seu quadro em alumínio 6061 e geometria esportiva, disponível em cinco cores. Ideal para iniciantes, combina qualidade e custo-benefício, proporcionando aventuras e novas descobertas com um bom desempenho.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Entrada",
+					"aro": "29",
+					"material": "Alumínio",
+					"velocidades": "21v",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.sensebike.com.br/impact-pro"
+		},
+		{
+			"id": "013",
+			"imagem": "/imgs/roubaix/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Roubaix SL8",
+			"valor": "15.000,00",
+			"desc": "Criamos a categoria de endurance em estrada duas décadas atrás, provando que ergonomia também significa alto desempenho. Hoje, a nova Roubaix SL8, com o novo Future Shock 3.0 é mais leve, mais rápida e mais suave do que qualquer bicicleta de estrada já feita — liberando uma velocidade, controle e segurança inigualáveis. A estrada pode ser infernal, mas em cima de uma Roubaix é sempre um paraíso.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Speed",
+					"aro": "700",
+					"material": "Carbono",
+					"velocidades": "20",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-roubaix-sl8/p/226294?color=367947-226294"
+		},
+		{
+			"id": "014",
+			"imagem": "/imgs/tarmacsl6/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Tarmac SL6",
+			"valor": "22.000,00",
+			"desc": "Desenvolvemos a Tarmac para ser rápida em qualquer condição, desde subidas longas até planícies ventosas e etapas de Grand Tour. Com o quadro Rider-First Engineered™, ela oferece uma qualidade de condução ajustada para todos os tamanhos, é 30 segundos mais rápida que a Tarmac SL5 em 40 km e 20% mais leve. Inclui câmbio mecânico Shimano Tiagra de 10 velocidades, freios a disco hidráulicos, rodas Axis Sport Disc e o selim Power.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Speed",
+					"aro": "700",
+					"material": "Carbono",
+					"velocidades": "20",
+					"tamanhos": [
+						{
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-tarmac-sl6/p/199468?color=321625-199468"
+		},
+		{
+			"id": "015",
+			"imagem": "/imgs/madonesl5/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Madone SL 5 8ª Gen",
+			"valor": "28.499,00",
+			"desc": "A Madone SL 5 8ª Geração é uma bicicleta de estrada aerodinâmica e ultraleve, oferecendo tecnologia de elite a um custo menor. Com um quadro de carbono OCLV 500 e guidão de duas peças com cabos ocultos, ela proporciona benefícios aerodinâmicos semelhantes ao modelo Madone SLR. Sua geometria favorece velocidade e controle, enquanto o grupo Shimano 105 garante confiabilidade e eficiência nas trocas de marcha.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Speed",
+					"aro": "700",
+					"material": "Carbono",
+					"velocidades": "24",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/bicicletas-de-estrada/bicicletas-de-estrada-de-alto-desempenho/madone/madone-sl/madone-sl-5-8%C2%AA-gera%C3%A7%C3%A3o/p/46218/?colorCode=blue"
+		},
+		{
+			"id": "016",
+			"imagem": "/imgs/checkpointalr5/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Checkpoint ALR 5",
+			"valor": "16.799,00",
+			"desc": "A Checkpoint ALR 5 é a nossa bicicleta mais indicada para o cascalho da linha. É uma construção de alta qualidade que aguentará os longos e esburacados quilômetros de vias pavimentadas, chão batido e até as estradas de paralelepípedo mais perigosas. Uma riqueza de recursos, como a geometria progressiva ágil porém estável, os inúmeros suportes para montagem e a transmissão GRX facilitam a personalização para o seu tipo de aventura.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Gravel",
+					"aro": "700",
+					"material": "Alumínio",
+					"velocidades": "22",
+					"tamanhos": [
+						{
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/bicicletas-de-estrada/gravel-bikes/checkpoint/checkpoint-alr/checkpoint-alr-5/p/35172/"
+		},
+		{
+			"id": "017",
+			"imagem": "/imgs/topstone3/trans.webp",
+			"marca": "Cannondale",
+			"nomeAbrev": "Topstone 3",
+			"valor": "8.790,00",
+			"desc": "A Cannondale Topstone 3 é uma bicicleta gravel robusta e versátil, perfeita para explorar diversos terrenos. Com um quadro de alumínio leve e geometria confortável, oferece estabilidade e controle. Equipado com suspensão dianteira de 40 mm, transmissão Shimano Sora de 9 velocidades e freios a disco hidráulicos, garante desempenho confiável e conforto em trilhas e estradas. Ideal para quem busca aventura e resistência em qualquer desafio.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Gravel",
+					"aro": "700",
+					"material": "Alumínio",
+					"velocidades": "18",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.cannondale.com/pt-br/bikes/road/gravel/topstone-alloy/topstone-3"
+		},
+		{
+			"id": "018",
+			"imagem": "/imgs/divergee5/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Diverge E5",
+			"valor": "12.000,00",
+			"desc": "A nova Diverge é a bicicleta de gravel mais versátil e ágil que você pode encontrar. Com um quadro de alumínio E5 e garfo em carbono FACT, oferece um pedal rápido e confiante em diversos terrenos. O grupo Shimano Claris 2x8 fornece uma ampla gama de marchas, enquanto as rodas Axis Elite e pneus Pathfinder Sport 38mm garantem eficiência no asfalto e versatilidade em terrenos mais difíceis. Ideal para quem busca aventura e conforto.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Gravel",
+					"aro": "700",
+					"material": "Alumínio",
+					"velocidades": "16",
+					"tamanhos": [
+						{
+							"g": "19 (G)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-diverge-e5/p/199973?searchText=95422-7256&color=322113-199973"
+		},
+		{
+			"id": "019",
+			"imagem": "/imgs/wildxs/trans.webp",
+			"marca": "Caloi",
+			"nomeAbrev": "Wild XS",
+			"valor": "1.690,00",
+			"desc": "Experimente a emoção de pedalar uma bike inspirada nas grandes competições de mountain bike! Com estilo agressivo e quadro de alumínio, a Wild XS é perfeita para se divertir e sair na frente na competição com os amigos!",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Infantil",
+					"aro": "20",
+					"material": "Alumínio",
+					"velocidades": "7",
+					"tamanhos": [
+						{
+							"u": "Único"
+						}
+					]
+				}
+			],
+			"url": "https://caloi.com/produto/wild-xs/"
+		},
+		{
+			"id": "020",
+			"imagem": "/imgs/snap20/trans.webp",
+			"marca": "Caloi",
+			"nomeAbrev": "Snap 20",
+			"valor": "889,00",
+			"desc": "Snap 2022 é uma bike para meninos que gostam de se divertir pedalando com os amigos, pelos parques e ciclovias. Com novo grafismo, possui freios V-Brake e suspensão dianteira.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Infantil",
+					"aro": "20",
+					"material": "Aço",
+					"velocidades": "7",
+					"tamanhos": [
+						{
+							"u": "Único"
+						}
+					]
+				}
+			],
+			"url": "https://caloi.com/produto/snap-20/"
+		},
+		{
+			"id": "021",
+			"imagem": "/imgs/riprockcoaster16/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Riprock Coaster 16",
+			"valor": "1.900,00",
+			"desc": "A Riprock Coaster 16 foi projetada para proporcionar pura diversão para os pequenos ciclistas. Com freio contra pedal, pneus largos de 16x2,3 para maior estabilidade e componentes duráveis, é ideal para iniciantes em trilhas. É a bicicleta perfeita para começar a pedalar com segurança e confiança.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Infantil",
+					"aro": "16",
+					"material": "Alumínio",
+					"velocidades": "1",
+					"tamanhos": [
+						{
+							"u": "Único"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-riprock-coaster-16/p/200229?color=322149-200229&searchText=B6517-8107"
+		},
+		{
+			"id": "022",
+			"imagem": "/imgs/vado4/trans.webp",
+			"marca": "Specialized",
+			"nomeAbrev": "Vado 4.0",
+			"valor": "21.000,00",
+			"desc": "Conheça o Vado SL, uma e-bike superleve, ideal para deslocamentos urbanos e treinos rápidos. Pesando 40% menos que o Vado completo, oferece qualidade de passeio, autonomia e potência excepcionais. Equipado com luzes embutidas para maior visibilidade, unidade de controle MasterMind Turbo para informações de passeio, pneus Nimbus para aderência e leveza que facilita transporte e armazenamento. O Vado SL é perfeito para quem busca conforto e agilidade em cada pedalada.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Elétrica Urbana",
+					"aro": "700",
+					"material": "Alumínio",
+					"velocidades": "11",
+					"tamanhos": [
+						{
+							"p": "15-16 (P)",
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.specialized.com/br/pt/bicicleta-turbo-vado-sl-40-eq/p/216533?color=348487-216533"
+		},
+		{
+			"id": "023",
+			"imagem": "/imgs/allant7/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Allant+ 7",
+			"valor": "21.599,00",
+			"desc": "A Allant+ 7 é uma e-bike premiada, construída para ciclistas e pessoas que desejam uma e-bike elegante e durável, com os benefícios adicionais do amortecimento de vibrações de um garfo com suspensão. Um potente sistema de acionamento Bosch que assiste a até 25 km/h, peças de qualidade superior e uma riqueza nos detalhes de design, fazem desta e-bike uma solução inteligente para se locomover pela cidade todos os dias.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Elétrica Urbana",
+					"aro": "27.5",
+					"material": "Alumínio",
+					"velocidades": "9",
+					"tamanhos": [
+						{
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.trekbikes.com/br/pt_BR/bicicletas/bicicletas-h%C3%ADbridas/bicicletas-h%C3%ADbridas-el%C3%A9tricas/allant/allant-7/p/30463/?colorCode=bluedark"
+		},
+		{
+			"id": "024",
+			"imagem": "/imgs/verve2/trans.webp",
+			"marca": "Trek",
+			"nomeAbrev": "Verve+ 2 2º Gen",
+			"valor": "17.999,00",
+			"desc": "Verve+ 2 é uma bike elétrica híbrida que o ajudará a sair e pedalar mais. Os seus passeios, deslocamentos e exercícios diários serão impulsionados pelo confiável e potente sistema eletroassistido a pedal da Bosch. Além disso, essa bike elétrica é equipada com peças que priorizam seu conforto e segurança, como um canote de suspensão que suaviza a via, pneus largos e estáveis, além de faróis e lanternas.",
+			"qty": "",
+			"categorias": [
+				{
+					"tipo": "Elétrica Urbana",
+					"aro": "700",
+					"material": "Alumínio",
+					"velocidades": "9",
+					"tamanhos": [
+						{
+							"m": "17-18 (M)",
+							"g": "19 (G)",
+							"gg": "21 (GG)"
+						}
+					]
+				}
+			],
+			"url": "https://www.giant-bicycles.com/br/cross-city-e-2"
 		}
 	]
 }
