@@ -47,6 +47,17 @@
 .mobile-produtos-categoria {
 	display: none;
 }
+#prod-filtros {
+	margin: 0 0 2rem;
+	#prod-filtros label {
+		font-size: var(--FS);
+	}
+	#ordenar {
+		width: 250px;
+		height: 40px;
+		border: 1px solid var(--LARANJA);
+	}
+}
 .produtos-categoria {
 	display: block;
 	font-size: 1.4rem;

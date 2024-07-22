@@ -37,11 +37,6 @@
 						>
 					</li>
 					<li class="nav-li">
-						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios e peças</a
-						>
-					</li>
-					<li class="nav-li">
 						<a draggable="false" href="index.html#sbrn" class="nav-a sbrn"
 							>Sobre nós</a
 						>
@@ -114,11 +109,6 @@
 					<li class="nav-li">
 						<a draggable="false" href="bikeshop.html" class="nav-a bikes"
 							>Bicicletas</a
-						>
-					</li>
-					<li class="nav-li">
-						<a draggable="false" href="acessorios.html" class="nav-a accs"
-							>Acessórios e peças</a
 						>
 					</li>
 					<li class="nav-li">
@@ -239,7 +229,7 @@
 				</div>
 			</section>
 			<section class="showdown">
-				<a class="sd-box sd-bicicleta">
+				<a class="sd-box">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
 						<p class="sd-marca"></p>
@@ -248,7 +238,7 @@
 						<p class="sd-desc"></p>
 					</div>
 				</a>
-				<a class="sd-box sd-bicicleta">
+				<a class="sd-box">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
 						<p class="sd-marca"></p>
@@ -257,21 +247,23 @@
 						<p class="sd-desc"></p>
 					</div>
 				</a>
-				<a class="sd-box sd-acessorios">
+				<a class="sd-box">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
+						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
+						<p class="sd-desc"></p>
 					</div>
-					<div class="categorias"></div>
 				</a>
-				<a class="sd-box sd-acessorios">
+				<a class="sd-box">
 					<img draggable="false" src="" alt="" class="sd-img" />
 					<div class="container">
+						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
+						<p class="sd-desc"></p>
 					</div>
-					<div class="categorias"></div>
 				</a>
 			</section>
 			<script>
@@ -287,9 +279,11 @@
 							// Seleciona duas bicicletas diferentes
 							const bicicleta1 = bicicletas[0];
 							const bicicleta2 = bicicletas[1];
+							const bicicleta3 = bicicletas[2];
+							const bicicleta4 = bicicletas[3];
 
 							// Atualiza os elementos com as informações das bicicletas
-							const elementos = document.querySelectorAll(".sd-bicicleta");
+							const elementos = document.querySelectorAll(".sd-box");
 
 							const atualizarElemento = (elemento, bicicleta) => {
 								const img = elemento.querySelector("img");
@@ -323,6 +317,12 @@
 							}
 							if (elementos.length > 1) {
 								atualizarElemento(elementos[1], bicicleta2);
+							}
+							if (elementos.length > 2) {
+								atualizarElemento(elementos[2], bicicleta3);
+							}
+							if (elementos.length > 3) {
+								atualizarElemento(elementos[3], bicicleta4);
 							}
 						})
 						.catch((err) => {
