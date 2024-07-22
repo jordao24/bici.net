@@ -53,9 +53,10 @@
 		font-size: var(--FS);
 	}
 	#ordenar {
-		width: 250px;
+		width: 230px;
 		height: 40px;
 		border: 1px solid var(--LARANJA);
+		font-weight: 400;
 	}
 }
 .produtos-categoria {
@@ -77,11 +78,44 @@
 		font-size: 16px;
 		text-indent: 1.2rem;
 		font-weight: 300;
+		display: grid;
+		grid-template-columns: 1em auto;
 		input {
 			width: 20px;
 			height: 20px;
 			border: 1px solid gray;
 			margin-right: 1rem;
+		}
+		input[type="checkbox"] {
+			/* Add if not using autoprefixer */
+			-webkit-appearance: none;
+			/* Remove most all native input styles */
+			appearance: none;
+			/* For iOS < 15 */
+			background-color: var(--BRANCO);
+			/* Not removed via appearance */
+			margin: 0;
+
+			font: inherit;
+			color: var(--AZUL);
+			width: 1.15em;
+			height: 1.15em;
+			border: 0.15em solid var(--AZUL);
+			border-radius: 0;
+			display: grid;
+			place-content: center;
+		}
+		input[type="checkbox"]:before {
+			width: 0.95em;
+			height: 0.95em;
+			content: "";
+			scale: 0;
+			transition: scale 150ms;
+			box-shadow: inset 1em 1em var(--LARANJA);
+			clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+		}
+		input[type="checkbox"]:checked:before {
+			scale: 1;
 		}
 	}
 }

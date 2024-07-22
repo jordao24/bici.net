@@ -65,9 +65,6 @@ function filtrarProdutos() {
 		(checkbox) => checkbox.id
 	);
 
-	console.log(categoriasVerificadas);
-	console.log(categoriasSelecionadas);
-
 	const prodCard = document.querySelectorAll(".prod-card");
 	prodCard.forEach((produto) => {
 		const categoriasProduto = produto.getAttribute("data-categoria").split(", ");
@@ -76,14 +73,59 @@ function filtrarProdutos() {
 		);
 		produto.style.display = exibirProduto ? "flex" : "none";
 	});
-
-	console.log(prodCard);
 }
 
 const checkboxes = document.querySelectorAll(".prod-checkbox");
 
 checkboxes.forEach((checkbox) => {
 	checkbox.addEventListener("change", filtrarProdutos);
+});
+
+// Função para ordenar produtos
+function ordenarProdutos(criterio) {
+	const container = document.getElementById("bicicletas");
+	let produtos = Array.from(container.getElementsByClassName("prod-card"));
+
+	produtos.sort((a, b) => {
+		const valorA = parseFloat(
+			a
+				.querySelector(".produto-valor")
+				.innerText.replace("R$ ", "")
+				.replace(".", "")
+				.replace(",", ".")
+		);
+		const valorB = parseFloat(
+			b
+				.querySelector(".produto-valor")
+				.innerText.replace("R$ ", "")
+				.replace(".", "")
+				.replace(",", ".")
+		);
+
+		const nomeA = a.querySelector(".produto-nome").innerText.toLowerCase();
+		const nomeB = b.querySelector(".produto-nome").innerText.toLowerCase();
+
+		switch (criterio) {
+			case "alfabetico":
+				return nomeA.localeCompare(nomeB);
+			case "preco-asc":
+				return valorA - valorB;
+			case "preco-desc":
+				return valorB - valorA;
+			default:
+				return 0;
+		}
+	});
+
+	// Limpa o container e adiciona os produtos ordenados
+	container.innerHTML = "";
+	produtos.forEach((produto) => container.appendChild(produto));
+}
+
+// Adiciona um listener para o select de ordenação
+document.getElementById("ordenar").addEventListener("change", (event) => {
+	const criterio = event.target.value;
+	ordenarProdutos(criterio);
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -196,6 +238,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			console.error("Erro ao carregar os dados das bicicletas:", err);
 		});
 
+	ordenarProdutos("alfabetico");
 	atualizarCarrinho();
 	atualizarValorTotal();
 	renderizarBicicletasAleatorias();
