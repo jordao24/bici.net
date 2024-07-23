@@ -6,24 +6,17 @@ function atualizarValorTotal() {
 
 	if (carrinho.length > 0) {
 		carrinho.forEach((bicicleta) => {
-			// Supondo que bicicleta.valor seja algo como "1.234,56"
 			let valorStr = bicicleta.valor;
 
-			// Remove o separador de milhar e substitui a vírgula por ponto
 			valorStr = valorStr.replace(".", "").replace(",", ".");
 
-			// Converte a string para número
 			const valor = parseFloat(valorStr);
 
-			// Usa 1 como quantidade padrão, se não houver valor
 			const quantidade = bicicleta.qty || 1;
 
-			// Adiciona o valor total do item ao total geral
 			total += valor * quantidade;
 		});
 	}
-
-	// Função para formatar o valor total com separadores de milhar
 	function formatarValor(valor) {
 		return valor
 			.toFixed(2)
@@ -31,7 +24,6 @@ function atualizarValorTotal() {
 			.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 	}
 
-	// Atualiza o valor total no DOM
 	valorTotal.forEach((element) => {
 		element.innerHTML = total === 0 ? "0,00" : formatarValor(total);
 	});
@@ -61,53 +53,6 @@ checkboxes.forEach((checkbox) => {
 	checkbox.addEventListener("change", filtrarProdutos);
 });
 
-// Função para ordenar produtos
-function ordenarProdutos(criterio) {
-	const container = document.getElementById("bicicletas");
-	let produtos = Array.from(container.getElementsByClassName("prod-card"));
-
-	produtos.sort((a, b) => {
-		const valorA = parseFloat(
-			a
-				.querySelector(".produto-valor")
-				.innerText.replace("R$ ", "")
-				.replace(".", "")
-				.replace(",", ".")
-		);
-		const valorB = parseFloat(
-			b
-				.querySelector(".produto-valor")
-				.innerText.replace("R$ ", "")
-				.replace(".", "")
-				.replace(",", ".")
-		);
-
-		const nomeA = a.querySelector(".produto-nome").innerText.toLowerCase();
-		const nomeB = b.querySelector(".produto-nome").innerText.toLowerCase();
-
-		switch (criterio) {
-			case "alfabetico":
-				return nomeA.localeCompare(nomeB);
-			case "preco-asc":
-				return valorA - valorB;
-			case "preco-desc":
-				return valorB - valorA;
-			default:
-				return 0;
-		}
-	});
-
-	// Limpa o container e adiciona os produtos ordenados
-	container.innerHTML = "";
-	produtos.forEach((produto) => container.appendChild(produto));
-}
-
-// Adiciona um listener para o select de ordenação
-document.getElementById("ordenar").addEventListener("change", (event) => {
-	const criterio = event.target.value;
-	ordenarProdutos(criterio);
-});
-
 window.addEventListener("DOMContentLoaded", () => {
 	fetch("js/json/bicicletas.json")
 		.then((response) => response.json())
@@ -116,13 +61,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			const container = document.getElementById("bicicletas");
 
-			// Armazena os itens em um mapa para acesso rápido
 			const itensMap = {};
 			bicicletas.forEach((modelo) => {
-				itensMap[modelo.id] = modelo; // Supondo que cada modelo tem um campo id único
+				itensMap[modelo.id] = modelo;
 			});
 
-			// Salva o mapa de itens no localStorage
 			localStorage.setItem("itensMap", JSON.stringify(itensMap));
 
 			bicicletas.forEach(function (modelo) {
@@ -130,7 +73,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				let categorias = modelo.categorias;
 
-				// Função para extrair categorias de um objeto ou array
 				function extrairCategorias(categorias) {
 					let categoriasValidas = [];
 
@@ -138,7 +80,6 @@ window.addEventListener("DOMContentLoaded", () => {
 						if (typeof categoria === "string" && categoria.trim()) {
 							categoriasValidas.push(categoria.trim());
 						} else if (typeof categoria === "object" && categoria !== null) {
-							// Se a categoria for um objeto ou array, percorra suas propriedades
 							for (let key in categoria) {
 								if (Array.isArray(categoria[key])) {
 									categoriasValidas = categoriasValidas.concat(
@@ -195,8 +136,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				const prodAdd = document.createElement("button");
 				prodAdd.classList.add("adicionar");
-				prodAdd.setAttribute("onclick", "addCarrinho(this)"); // Adiciona o ID ao atributo data-id
-				prodAdd.setAttribute("data-id", modelo.id); // Adiciona o ID ao atributo data-id
+				prodAdd.setAttribute("onclick", "addCarrinho(this)");
+				prodAdd.setAttribute("data-id", modelo.id);
 				prodAdd.innerHTML = "&#43;";
 
 				const prodDesc = document.createElement("p");
@@ -218,31 +159,25 @@ window.addEventListener("DOMContentLoaded", () => {
 			console.error("Erro ao carregar os dados das bicicletas:", err);
 		});
 
-	ordenarProdutos("alfabetico");
 	atualizarCarrinho();
 	atualizarValorTotal();
 	renderizarBicicletasAleatorias();
 });
 
 function addCarrinho(button) {
-	// Obtém o ID do item do atributo data-id do botão clicado
 	const itemId = button.getAttribute("data-id");
 
-	// Recupera o mapa de itens do localStorage
 	const itensMap = JSON.parse(localStorage.getItem("itensMap")) || {};
 
-	// Recupera o carrinho do localStorage ou cria um novo
 	let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-	// Verifica se o item está presente no itensMap
 	let bicicleta = itensMap[itemId];
 
 	const bicicletaIndex = carrinho.findIndex((item) => item.id == itemId);
 
 	if (bicicletaIndex === -1) {
-		// Adiciona o item ao carrinho
 		carrinho.push(bicicleta);
-		// Atualiza o carrinho
+
 		localStorage.setItem("carrinho", JSON.stringify(carrinho));
 	} else {
 		carrinho[bicicletaIndex] = bicicleta;

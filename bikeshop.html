@@ -226,7 +226,7 @@
 					}
 					slides[slideIndex - 1].style.cssText =
 						"display: block; opacity: 1; transition: opacity 400ms;";
-					setTimeout(showSlides, 3500); // Change image every 2 seconds
+					setTimeout(showSlides, 3500);
 				}
 			</script>
 			<section class="bike-produtos">
@@ -523,6 +523,57 @@
 								</option>
 							</select>
 						</div>
+						<script>
+							function ordenarProdutos(criterio) {
+								const container = document.getElementById("bicicletas");
+								let produtos = Array.from(
+									container.getElementsByClassName("prod-card")
+								);
+
+								produtos.sort((a, b) => {
+									const valorA = parseFloat(
+										a
+											.querySelector(".produto-valor")
+											.innerText.replace("R$ ", "")
+											.replace(".", "")
+											.replace(",", ".")
+									);
+									const valorB = parseFloat(
+										b
+											.querySelector(".produto-valor")
+											.innerText.replace("R$ ", "")
+											.replace(".", "")
+											.replace(",", ".")
+									);
+
+									const nomeA = a.querySelector(".produto-nome").innerText.toLowerCase();
+									const nomeB = b.querySelector(".produto-nome").innerText.toLowerCase();
+
+									switch (criterio) {
+										case "alfabetico":
+											return nomeA.localeCompare(nomeB);
+										case "preco-asc":
+											return valorA - valorB;
+										case "preco-desc":
+											return valorB - valorA;
+										default:
+											return 0;
+									}
+								});
+
+								container.innerHTML = "";
+								produtos.forEach((produto) => container.appendChild(produto));
+							}
+
+							const ordenar = document.getElementById("ordenar");
+
+							ordenar.addEventListener("change", (event) => {
+								const criterio = event.target.value;
+								ordenarProdutos(criterio);
+							});
+
+							ordernarProdutos("alfabetico");
+						</script>
 						<ul class="prod-categorias">
 							<ul class="prod-cat-title">
 								<p>CATEGORIA</p>
