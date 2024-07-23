@@ -129,7 +129,7 @@ body {
 		transition: box-shadow 250ms linear;
 	}
 	.he-button:hover {
-		box-shadow: inset 85px 0 0 0 var(--LARANJA);
+		box-shadow: inset 90px 0 0 0 var(--LARANJA);
 		cursor: pointer;
 	}
 	.carrinho {
