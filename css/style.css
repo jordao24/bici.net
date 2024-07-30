@@ -823,7 +823,7 @@ body {
 			height: auto;
 			padding: var(--PADDING-M);
 			.sd-box {
-				height: 384px;
+				height: 300px;
 				width: 264px;
 			}
 			:is(.sd-box:nth-child(2), .sd-box:nth-child(3), .sd-box:nth-child(4)) {
@@ -1140,7 +1140,7 @@ body {
 			height: auto;
 			padding: var(--PADDING-M);
 			.sd-box {
-				height: 384px;
+				height: 300px;
 				width: 264px;
 			}
 			:is(.sd-box:nth-child(3), .sd-box:nth-child(4)) {
@@ -1460,7 +1460,7 @@ body {
 			height: auto;
 			padding: var(--PADDING-M);
 			.sd-box {
-				height: 384px;
+				height: 300px;
 				width: 264px;
 			}
 			:is(.sd-box:nth-child(3), .sd-box:nth-child(4)) {
@@ -1545,7 +1545,7 @@ body {
 			height: auto;
 			padding: var(--PADDING-M);
 			.sd-box {
-				height: 384px;
+				height: 300px;
 				width: 264px;
 			}
 			.sd-box:nth-child(4) {
