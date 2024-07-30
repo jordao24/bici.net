@@ -3,7 +3,7 @@
 	"bicicletas": [
 		{
 			"id": "3015",
-			"imagem": "/imgs/slash98/trans.webp",
+			"imagem": "imgs/slash98/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Slash 9.8 6º Gen",
 			"valor": "74.299,99",
@@ -29,7 +29,7 @@
 		},
 		{
 			"id": "420",
-			"imagem": "/imgs/procaliber98/trans.webp",
+			"imagem": "imgs/procaliber98/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Procaliber 9.8",
 			"valor": "33.079,00",
@@ -55,7 +55,7 @@
 		},
 		{
 			"id": "001",
-			"imagem": "/imgs/stumpjumper/trans.webp",
+			"imagem": "imgs/stumpjumper/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Stumpjumper",
 			"valor": "17.000,00",
@@ -78,7 +78,7 @@
 		},
 		{
 			"id": "002",
-			"imagem": "/imgs/fuelex86gen/trans.webp",
+			"imagem": "imgs/fuelex86gen/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Fuel EX 8 6º Gen",
 			"valor": "22.199,99",
@@ -103,7 +103,7 @@
 		},
 		{
 			"id": "003",
-			"imagem": "/imgs/cattura pro t-20 xt/trans.webp",
+			"imagem": "imgs/cattura pro t-20 xt/trans.webp",
 			"marca": "OGGI",
 			"nomeAbrev": "Cattura Pro T-20",
 			"valor": "29.990,00",
@@ -128,7 +128,7 @@
 		},
 		{
 			"id": "004",
-			"imagem": "/imgs/legend/trans.png",
+			"imagem": "imgs/legend/trans.png",
 			"marca": "South",
 			"nomeAbrev": "Legend 2023",
 			"valor": "1.421,75",
@@ -153,7 +153,7 @@
 		},
 		{
 			"id": "005",
-			"imagem": "/imgs/f-si hi-mod 1/trans.webp",
+			"imagem": "imgs/f-si hi-mod 1/trans.webp",
 			"marca": "Cannondale",
 			"nomeAbrev": "F-Si Hi-MOD 1",
 			"valor": "45.979,90",
@@ -179,7 +179,7 @@
 		},
 		{
 			"id": "006",
-			"imagem": "/imgs/rockhopper/trans.webp",
+			"imagem": "imgs/rockhopper/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Rockhopper Comp 29",
 			"valor": "4.000,00",
@@ -205,7 +205,7 @@
 		},
 		{
 			"id": "007",
-			"imagem": "/imgs/rail7/trans.webp",
+			"imagem": "imgs/rail7/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Rail 7 3º Gen",
 			"valor": "66.500,00",
@@ -231,7 +231,7 @@
 		},
 		{
 			"id": "008",
-			"imagem": "/imgs/potenza/trans.webp",
+			"imagem": "imgs/potenza/trans.webp",
 			"marca": "OGGI",
 			"nomeAbrev": "Potenza",
 			"valor": "65.990,00",
@@ -256,7 +256,7 @@
 		},
 		{
 			"id": "009",
-			"imagem": "/imgs/bigwheel86/trans.webp",
+			"imagem": "imgs/bigwheel86/trans.webp",
 			"marca": "OGGI",
 			"nomeAbrev": "Big Wheel 8.6",
 			"valor": "26.799,90",
@@ -281,7 +281,7 @@
 		},
 		{
 			"id": "010",
-			"imagem": "/imgs/vulcan/trans.webp",
+			"imagem": "imgs/vulcan/trans.webp",
 			"marca": "Caloi",
 			"nomeAbrev": "Vulcan",
 			"valor": "1.499,00",
@@ -305,7 +305,7 @@
 		},
 		{
 			"id": "011",
-			"imagem": "/imgs/hackersport/trans.webp",
+			"imagem": "imgs/hackersport/trans.webp",
 			"marca": "OGGI",
 			"nomeAbrev": "Hacker Sport",
 			"valor": "1.999,00",
@@ -330,7 +330,7 @@
 		},
 		{
 			"id": "012",
-			"imagem": "/imgs/impactpro/trans.webp",
+			"imagem": "imgs/impactpro/trans.webp",
 			"marca": "Sense",
 			"nomeAbrev": "One",
 			"valor": "2.199,00",
@@ -356,7 +356,7 @@
 		},
 		{
 			"id": "013",
-			"imagem": "/imgs/roubaix/trans.webp",
+			"imagem": "imgs/roubaix/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Roubaix SL8",
 			"valor": "15.000,00",
@@ -382,7 +382,7 @@
 		},
 		{
 			"id": "014",
-			"imagem": "/imgs/tarmacsl6/trans.webp",
+			"imagem": "imgs/tarmacsl6/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Tarmac SL6",
 			"valor": "22.000,00",
@@ -405,7 +405,7 @@
 		},
 		{
 			"id": "015",
-			"imagem": "/imgs/madonesl5/trans.webp",
+			"imagem": "imgs/madonesl5/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Madone SL 5 8ª Gen",
 			"valor": "28.499,00",
@@ -430,7 +430,7 @@
 		},
 		{
 			"id": "016",
-			"imagem": "/imgs/checkpointalr5/trans.webp",
+			"imagem": "imgs/checkpointalr5/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Checkpoint ALR 5",
 			"valor": "16.799,00",
@@ -453,7 +453,7 @@
 		},
 		{
 			"id": "017",
-			"imagem": "/imgs/topstone3/trans.webp",
+			"imagem": "imgs/topstone3/trans.webp",
 			"marca": "Cannondale",
 			"nomeAbrev": "Topstone 3",
 			"valor": "8.790,00",
@@ -479,7 +479,7 @@
 		},
 		{
 			"id": "018",
-			"imagem": "/imgs/divergee5/trans.webp",
+			"imagem": "imgs/divergee5/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Diverge E5",
 			"valor": "12.000,00",
@@ -502,7 +502,7 @@
 		},
 		{
 			"id": "019",
-			"imagem": "/imgs/wildxs/trans.webp",
+			"imagem": "imgs/wildxs/trans.webp",
 			"marca": "Caloi",
 			"nomeAbrev": "Wild XS",
 			"valor": "1.690,00",
@@ -525,7 +525,7 @@
 		},
 		{
 			"id": "020",
-			"imagem": "/imgs/snap20/trans.webp",
+			"imagem": "imgs/snap20/trans.webp",
 			"marca": "Caloi",
 			"nomeAbrev": "Snap 20",
 			"valor": "889,00",
@@ -548,7 +548,7 @@
 		},
 		{
 			"id": "021",
-			"imagem": "/imgs/riprockcoaster16/trans.webp",
+			"imagem": "imgs/riprockcoaster16/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Riprock Coaster 16",
 			"valor": "1.900,00",
@@ -571,7 +571,7 @@
 		},
 		{
 			"id": "022",
-			"imagem": "/imgs/vado4/trans.webp",
+			"imagem": "imgs/vado4/trans.webp",
 			"marca": "Specialized",
 			"nomeAbrev": "Vado 4.0",
 			"valor": "21.000,00",
@@ -597,7 +597,7 @@
 		},
 		{
 			"id": "023",
-			"imagem": "/imgs/allant7/trans.webp",
+			"imagem": "imgs/allant7/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Allant+ 7",
 			"valor": "21.599,00",
@@ -621,7 +621,7 @@
 		},
 		{
 			"id": "024",
-			"imagem": "/imgs/verve2/trans.webp",
+			"imagem": "imgs/verve2/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Verve+ 2 2º Gen",
 			"valor": "17.999,00",
