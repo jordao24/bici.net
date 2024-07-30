@@ -98,12 +98,10 @@ window.addEventListener("DOMContentLoaded", () => {
 					return categoriasValidas;
 				}
 
-				// Extrair categorias válidas
 				let categoriasValidas = extrairCategorias(categorias);
 
 				prodCard.classList.add("prod-card");
 
-				// Definir o atributo data-categoria com as categorias concatenadas
 				if (categoriasValidas.length > 0) {
 					prodCard.setAttribute("data-categoria", categoriasValidas.join(", "));
 				}

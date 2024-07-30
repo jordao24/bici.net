@@ -235,7 +235,6 @@
 						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
-						<p class="sd-desc"></p>
 					</div>
 				</a>
 				<a class="sd-box">
@@ -244,7 +243,6 @@
 						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
-						<p class="sd-desc"></p>
 					</div>
 				</a>
 				<a class="sd-box">
@@ -253,7 +251,6 @@
 						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
-						<p class="sd-desc"></p>
 					</div>
 				</a>
 				<a class="sd-box">
@@ -262,7 +259,6 @@
 						<p class="sd-marca"></p>
 						<p class="sd-title"></p>
 						<p class="sd-preco"></p>
-						<p class="sd-desc"></p>
 					</div>
 				</a>
 			</section>
@@ -273,16 +269,13 @@
 						.then((items) => {
 							let bicicletas = items.bicicletas;
 
-							// Embaralha o array de bicicletas
 							bicicletas = bicicletas.sort(() => Math.random() - 0.5);
 
-							// Seleciona duas bicicletas diferentes
 							const bicicleta1 = bicicletas[0];
 							const bicicleta2 = bicicletas[1];
 							const bicicleta3 = bicicletas[2];
 							const bicicleta4 = bicicletas[3];
 
-							// Atualiza os elementos com as informações das bicicletas
 							const elementos = document.querySelectorAll(".sd-box");
 
 							const atualizarElemento = (elemento, bicicleta) => {
@@ -290,7 +283,6 @@
 								const marca = elemento.querySelector("p.sd-marca");
 								const titulo = elemento.querySelector("p.sd-title");
 								const preco = elemento.querySelector("p.sd-preco");
-								const descricao = elemento.querySelector("p.sd-desc");
 
 								// Atualiza imagem, título e preço
 								img.setAttribute("src", bicicleta.imagem);
@@ -298,16 +290,6 @@
 								titulo.innerHTML = bicicleta.nomeAbrev;
 								preco.innerHTML = bicicleta.valor;
 
-								// Atualiza descrição (resumida para 20 palavras)
-								const descricaoResumida =
-									bicicleta.desc.split(" ").slice(0, 20).join(" ") +
-									(bicicleta.desc.split(" ").length > 20 ? "..." : "");
-
-								if (descricao) {
-									descricao.innerHTML = descricaoResumida;
-								}
-
-								// Atualiza o link para o produto específico
 								const link = elemento;
 								link.setAttribute("href", bicicleta.url);
 							};
@@ -330,7 +312,6 @@
 						});
 				}
 
-				// Chama a função para renderizar bicicletas aleatórias
 				renderizarBicicletasAleatorias();
 			</script>
 			<section id="sbrn" class="sobrenos">

@@ -382,7 +382,7 @@ body {
 		.sd-box {
 			overflow: hidden;
 			padding: var(--PADDING-P) var(--PADDING-M);
-			height: 384px;
+			height: 300px;
 			width: 264px;
 			background-color: var(--BRANCO);
 			border: 2px solid var(--AZUL);
@@ -397,16 +397,6 @@ body {
 			grid-template-rows: 2fr 3fr 1fr;
 			justify-items: center;
 			transition: scale 400ms;
-		}
-		.sd-box::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 120px; /* Ajuste a altura conforme necessário */
-			background: linear-gradient(to bottom, transparent, var(--BRANCO));
-			z-index: 0;
 		}
 		.sd-img {
 			height: 112px;
@@ -437,19 +427,6 @@ body {
 		}
 		.sd-preco:before {
 			content: "R$ ";
-		}
-		.categorias {
-			justify-self: left;
-			display: flex;
-			gap: 16px;
-		}
-		.cat-box {
-			border: 1px solid var(--LARANJA);
-			height: 32px;
-			width: 64px;
-			text-align: center;
-			align-content: center;
-			border-radius: 16px;
 		}
 		.sd-box:hover {
 			scale: 1.02;
