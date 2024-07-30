@@ -3,7 +3,7 @@
 	"bicicletas": [
 		{
 			"id": "3015",
-			"imagem": "imgs/slash98/trans.webp",
+			"imagem": "./imgs/slash98/trans.webp",
 			"marca": "Trek",
 			"nomeAbrev": "Slash 9.8 6º Gen",
 			"valor": "74.299,99",
